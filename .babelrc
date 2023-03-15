@@ -1,0 +1,42 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": {
+          "version": 3
+        },
+        "useBuiltIns": "usage",
+        "targets": {
+          "ie": "11"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "regenerator": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "assets": "./src/assets",
+          "styles": "./src/assets/styles",
+          "images": "./src/assets/images",
+          "videos": "./src/assets/videos",
+          "fonts": "./src/assets/fonts",
+        }
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-transform-es3-property-literals",
+    "babel-plugin-transform-es3-member-expression-literals"
+  ]
+}

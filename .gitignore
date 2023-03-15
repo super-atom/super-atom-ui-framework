@@ -1,0 +1,7 @@
+node_modules
+.vscode
+.DS_Store
+dist
+.yarn/
+yarn-error.log
+sources/assets/fonts/*

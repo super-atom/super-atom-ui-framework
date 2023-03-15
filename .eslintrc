@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    "prettier",
+    "import",
+  ],
+  "extends": [
+    "eslint:recommended",
+    "prettier/prettier",
+    "plugin:import/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    // "prettier/prettier": "error",
+    "no-undefined": 0,
+    "no-unused-vars": "off",
+    "import/no-unresolved": "error"
+  },
+  "env": {
+    "browser": true,
+    "es2015": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "ignorePatterns": [
+    ".gitignore",
+    "config/",
+    "dist/",
+    "node_modules/"
+  ]
+}
