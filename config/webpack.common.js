@@ -3,12 +3,16 @@ const path = require('path');
 const webpack = require('webpack');
 const PATH = require('../config/path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackInjector = require('html-webpack-injector');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
+const htmlPlugins = generateHtmlPlugins('../src/views/pages');
 module.exports = {
   entry: {
-    index: './src/index.js',
-    print: './src/print.js',
+    index: './src/js/index.js',
+    print: './src/js/print.js',
+    style: './src/js/style.js',
   },
   target: ['web', 'es5'],
   output: {
@@ -25,8 +29,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          // adding a hash to the file
-          filename: '[name].[hash][ext]',
+          filename: '[name].[ext]',
         },
       },
       {
@@ -34,7 +37,7 @@ module.exports = {
         type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 50 * 1024, // 50kb
+            maxSize: 500 * 1024, // 500kb
           },
         },
       },
@@ -42,6 +45,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.hbs$/,
+        use: ['handlebars-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
@@ -51,10 +66,43 @@ module.exports = {
       jQuery: 'jquery',
       'window.$': 'jquery',
       'window.jQuery': 'jquery',
+      _: 'lodash',
     }),
-    new HtmlWebpackPlugin({
-      title: 'Development',
-    }),
-    new WebpackManifestPlugin()
-  ],
+    new HtmlWebpackInjector(),
+    new WebpackManifestPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'src', to: './' }],
+    })
+    // new HtmlWebpackPlugin({
+    //   template: 'src/views/templates/template.hbs',
+    //   title: 'Main Page',
+    //   filename: '../dist/views/index.html',
+    //   minify: false,
+    //   chunks: ['index', 'print', 'style'],
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: 'src/views/templates/page-sub.hbs',
+    //   title: 'TEST-02',
+    //   filename: '../dist/views/TEST-02.html',
+    //   minify: false,
+    //   chunks: ['index', 'print', 'style'],
+    // }),
+  ].concat(htmlPlugins),
 };
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map((item) => {
+    // Split names and extension
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      minify: false,
+      chunks: ['index', 'style'],
+    });
+  });
+}
+
+

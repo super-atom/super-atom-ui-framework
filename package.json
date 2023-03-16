@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.js --mode development --progress",
     "prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js --mode production --progress",
     "pretty": "prettier --write \"./**/*.{js,scss,json}\"",
-    "clean": "rimraf ./dist/*",
+    "clean": "rimraf dist",
     "serve": "webpack serve",
     "design-tokens": "node ./tokens/transformTokens.js"
   },
@@ -34,6 +34,7 @@
     "babel-plugin-transform-es3-property-literals": "^6.22.0",
     "browserlist": "^1.0.1",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.29.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
@@ -45,7 +46,10 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-webpack-plugin": "^4.0.0",
     "file-loader": "^6.2.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.3",
     "html-loader": "^4.2.0",
+    "html-webpack-injector": "^1.1.4",
     "html-webpack-plugin": "^5.5.0",
     "lost": "^9.0.1",
     "mini-css-extract-plugin": "^2.7.3",
@@ -86,6 +90,7 @@
   },
   "packageManager": "yarn@3.4.1",
   "dependencies": {
+    "jquery": "^3.6.4",
     "lodash": "^4.17.21"
   }
 }

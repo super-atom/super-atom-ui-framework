@@ -5,6 +5,7 @@ module.exports.cssLoaders = [
     loader: 'css-loader',
     options: {
       importLoaders: 4,
+      sourceMap: true,
     },
   },
   {

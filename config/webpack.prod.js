@@ -8,8 +8,10 @@ const { cssLoaders } = require('./util');
 
 const configureOptimization = () => {
   return {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimize: false,
+    // minimizer: [
+    //   new TerserPlugin(),
+    // ],
     splitChunks: {
       chunks: 'async',
       minSize: 20000,
@@ -61,8 +63,8 @@ module.exports = merge(common, {
     }),
 
     new MiniCssExtractPlugin({
-      filename: 'vendor/css/[name].[fullhash].css',
-      chunkFilename: 'vendor/css/[name].[fullhash].css',
+      filename: 'styles/[name].css',
+      chunkFilename: 'styles/[name].css',
     }),
   ],
 });
