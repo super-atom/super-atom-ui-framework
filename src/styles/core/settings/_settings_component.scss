@@ -1,0 +1,38 @@
+@import '../core';
+@import '../../../tokens/output/variables.scss';
+@include component($components-map);
+
+.btn {
+  @extend .button;
+}
+
+img.img {
+  @include rwd-img();
+}
+
+
+select.select {
+  @include select;
+}
+
+textarea.textarea {
+  @include textarea;
+}
+
+input.input {
+  @include input;
+}
+
+input.input-radio[type='radio'] {
+  @include radio;
+}
+
+input.input-checkbox[type='checkbox'] {
+  @include checkbox;
+}
+
+.input-checkbox-wrap,
+.input-radio-wrap {
+  display: flex;
+  align-items: center;
+}

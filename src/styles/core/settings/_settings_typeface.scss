@@ -1,0 +1,30 @@
+@import '../core.scss';
+@include font-face(
+  'SpoqaHanSansNeo',
+  '../../../../assets/fonts/SpoqaHanSansNeo-Bold',
+  900
+);
+@include font-face(
+  'SpoqaHanSansNeo',
+  '../../../../assets/fonts/SpoqaHanSansNeo-Medium',
+  700
+);
+@include font-face(
+  'SpoqaHanSansNeo',
+  '../../../../assets/fonts/SpoqaHanSansNeo-Regular',
+  500
+);
+@include font-face(
+  'SpoqaHanSansNeo',
+  '../../../../assets/fonts/SpoqaHanSansNeo-Light',
+  300
+);
+@include font-face(
+  'SpoqaHanSansNeo',
+  '../../../../assets/fonts/SpoqaHanSansNeo-Thin',
+  100
+);
+@include font-face('LGSmHa', '../../../../assets/fonts/LGSmHaB', 900);
+@include font-face('LGSmHa', '../../../../assets/fonts/LGSmHaSB', 700);
+@include font-face('LGSmHa', '../../../../assets/fonts/LGSmHaR', 500);
+@include font-face('LGSmHa', '../../../../assets/fonts/LGSmHaL', 300);

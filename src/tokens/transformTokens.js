@@ -5,7 +5,7 @@ const webConfig = require('./libs/web');
 const StyleDictionary = require('style-dictionary');
 
 // PATH
-const basePath = './tokens/';
+const basePath = './src/tokens/';
 const buildPath = path.resolve('./tokens/result', basePath);
 
 const StyleDictionaryExtended = StyleDictionary.extend({
@@ -16,11 +16,6 @@ const StyleDictionaryExtended = StyleDictionary.extend({
     css: {
       transformGroup: 'custom/css',
       buildPath: buildPath + '/css/',
-      options: {
-        fontFamilies: {
-          'Akzidenz-Grotesk Pro': '"Akzidenz-Grotesk Pro", sans-serif',
-        },
-      },
       files: [
         {
           filter: require('./libs/web/filterWeb'),

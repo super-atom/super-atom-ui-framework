@@ -4,24 +4,24 @@ const webpack = require('webpack');
 const PATH = require('../config/path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackInjector = require('html-webpack-injector');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 const htmlPlugins = generateHtmlPlugins('../src/views/pages');
 module.exports = {
   entry: {
-    index: './src/js/index.js',
-    print: './src/js/print.js',
+    common: './src/js/common.js',
     style: './src/js/style.js',
+    guide: './src/js/guide.js',
   },
   target: ['web', 'es5'],
   output: {
     path: PATH.dist,
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     clean: true,
   },
   resolve: {
-    extensions: ['.html', '.js', '.scss'],
+    extensions: ['.js', '.css', '.scss'],
   },
   module: {
     rules: [
@@ -37,7 +37,7 @@ module.exports = {
         type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 500 * 1024, // 500kb
+            maxSize: 5000 * 1024,
           },
         },
       },
@@ -60,6 +60,30 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
+
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -68,31 +92,18 @@ module.exports = {
       'window.jQuery': 'jquery',
       _: 'lodash',
     }),
-    new HtmlWebpackInjector(),
-    new WebpackManifestPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [{ from: 'src', to: './' }],
-    })
-    // new HtmlWebpackPlugin({
-    //   template: 'src/views/templates/template.hbs',
-    //   title: 'Main Page',
-    //   filename: '../dist/views/index.html',
-    //   minify: false,
-    //   chunks: ['index', 'print', 'style'],
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: 'src/views/templates/page-sub.hbs',
-    //   title: 'TEST-02',
-    //   filename: '../dist/views/TEST-02.html',
-    //   minify: false,
-    //   chunks: ['index', 'print', 'style'],
-    // }),
+    new WebpackManifestPlugin({
+      fileName: 'assets.json',
+      basePath: '/',
+    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [{ from: 'src', to: './' }],
+    // })
   ].concat(htmlPlugins),
 };
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
   return templateFiles.map((item) => {
-    // Split names and extension
     const parts = item.split('.');
     const name = parts[0];
     const extension = parts[1];
@@ -100,9 +111,7 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       minify: false,
-      chunks: ['index', 'style'],
+      chunks: ['common', 'style'],
     });
   });
 }
-
-

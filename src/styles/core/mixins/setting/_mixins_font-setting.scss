@@ -1,0 +1,93 @@
+@import '../../variables/_variables_font';
+@import '../../variables/variables_typeface';
+
+// *Responsive Base Heading Element Font Size
+@mixin base-font-sizes-h1() {
+  @include font-size($base-font-sizes-h1);
+}
+@mixin base-font-sizes-h2() {
+  @include font-size($base-font-sizes-h2);
+}
+@mixin base-font-sizes-h3() {
+  @include font-size($base-font-sizes-h3);
+}
+@mixin base-font-sizes-h4() {
+  @include font-size($base-font-sizes-h4);
+}
+@mixin base-font-sizes-h5() {
+  @include font-size($base-font-sizes-h5);
+}
+@mixin base-font-sizes-h6() {
+  @include font-size($base-font-sizes-h6);
+}
+
+// *Responsive Base Custom Font Size
+@mixin base-font-sizes() {
+  @include font-size($base-font-sizes);
+}
+
+@mixin base-font-title() {
+  font-family: $title-font;
+  letter-spacing: $title-font-letter-spacing;
+  @include font-size($base-font-sizes-title);
+}
+
+@mixin base-font-sub-title() {
+  font-family: $title-font;
+  letter-spacing: $title-font-letter-spacing;
+  @include font-size($base-font-sizes-sub-title);
+}
+
+@mixin base-font-content() {
+  font-family: $main-font;
+  line-height: $base-font-line-height;
+  letter-spacing: $base-font-letter-spacing;
+  @include font-size($base-font-sizes-content);
+}
+
+@mixin font-heading-1() {
+  font: $title-font-typeface;
+  font-size: 3.6rem;
+}
+@mixin font-heading-2() {
+  font: $title-font-typeface;
+  font-size: 2.8rem;
+}
+@mixin font-heading-3() {
+  font: $title-font-typeface;
+  font-size: 2.5rem;
+}
+@mixin font-heading-4() {
+  font: $title-font-typeface;
+  font-size: 2rem;
+}
+@mixin font-body-1($size) {
+  font: $main-typeface;
+  font-size: 1.5rem;
+  @if($size == r) {
+    font-weight: 300;
+  } @else if($size == m) {
+    font-weight: 500;
+  } @else if($size == b) {
+    font-weight: 700;
+  }
+}
+@mixin font-body-2($size) {
+  font: $main-typeface;
+  font-size: 1.4rem;
+  @if($size == r) {
+    font-weight: 300;
+  } @else if($size == b) {
+    font-weight: 700;
+  }
+}
+@mixin font-body-3() {
+  font: $main-typeface;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+@mixin font-caption() {
+  font: $main-typeface;
+  font-size: 1.3rem;
+  font-weight: 300;
+}

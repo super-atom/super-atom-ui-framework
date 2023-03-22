@@ -5,6 +5,8 @@ const common = require('./webpack.common.js');
 const PATH = require('./path');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const baseConfig = require('./webpack.common.js');
 const ENV = require('./env');
@@ -13,9 +15,16 @@ const { cssLoaders } = require('./util');
 
 module.exports = merge(common, {
   mode: 'development',
+  stats: {
+    warnings: false,
+  },
+
   devtool: 'inline-source-map',
   target: 'web',
   devServer: {
+    // devMiddleware: {
+    //   writeToDisk: true,
+    // },
     client: {
       overlay: {
         errors: false,
@@ -53,11 +62,9 @@ module.exports = merge(common, {
       emitWarning: true,
       files: path.resolve(__dirname, '../src'),
     }),
-    new StylelintPlugin({
-      files: path.join('src', '**/*.s?(a|c)ss'),
-    }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),
+    // new BundleAnalyzerPlugin(),
   ],
 });

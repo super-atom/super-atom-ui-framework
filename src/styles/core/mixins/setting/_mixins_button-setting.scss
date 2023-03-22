@@ -1,0 +1,63 @@
+
+@mixin button-setting() {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($button-background-color, 5%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    border: none;
+  }
+  &.round,
+  &.round-reverse,
+  &[data-type='round'],
+  &[data-type='round-reverse'] {
+    border-radius: 50px !important;
+  }
+
+  &.text,
+  &[data-type='text'] {
+    border-color: transparent;
+  }
+
+  &.outlined,
+  &[data-type='outlined'] {
+    border-color: $base-color-grey-3;
+    border-style: solid;
+    // border-style: solid;
+    border-width: 1px;
+  }
+
+  &.outlined-reverse,
+  &[data-type='outlined-reverse'] {
+    color: $white;
+    border-color: $white;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+
+  &.text,
+  &.outlined,
+  &.round-reverse,
+  &[data-type='text'],
+  &[data-type='outlined'],
+  &[data-type='round-reverse'] {
+    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &.round-reverse,
+  &[data-type='round-reverse'] {
+    border-color: $base-color-grey-3;
+    border-style: solid;
+    border-width: 1px;
+  }
+}

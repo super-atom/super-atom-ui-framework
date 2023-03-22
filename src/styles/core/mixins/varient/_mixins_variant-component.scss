@@ -1,0 +1,29 @@
+@import '../form/mixins_button';
+@import '../setting/index';
+
+@mixin component($component-map) {
+  @each $component, $map in $component-map {
+    .#{$component} {
+      @if ($component == button) {
+        @include button($font: map-deep-get($component-map, button, font),
+          // $font-size: map-deep-get($component-map, button, font-size),
+          $padding: map-deep-get($component-map, button, padding),
+          $border-width: map-deep-get($component-map, button, border-width),
+          $border-style: map-deep-get($component-map, button, border-style),
+          $border-color: map-deep-get($component-map, button, border-color),
+          $background-color: map-deep-get($component-map, button, background-color),
+          $border-radius: map-deep-get($component-map, button, border-radius),
+          $box-shadow: map-deep-get($component-map, button, box-shadow),
+          $line-height: map-deep-get($component-map, button, border-line-height),
+          $min-height: map-deep-get($component-map, button, min-height));
+        @include button-setting();
+      }
+      @if ($component == checkbox) {
+        @include checkbox($font-size: map-deep-get($component-map, checkbox, font-size),
+        $size: map-deep-get($component-map, checkbox, size),
+        $color: map-deep-get($component-map, checkbox, color));
+        @include checkbox-setting();
+      }
+    }
+  }
+}

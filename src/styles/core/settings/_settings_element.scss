@@ -1,0 +1,20 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+// Setting Base Root
+html {
+  font-size: $root-font-size;
+}
+
+// Setting Base Body
+body {
+  color: $body-font-color;
+  font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  font-family: $body-font-family;
+  line-height: $body-line-height;
+  letter-spacing: $body-letter-spacing;
+  word-wrap: break-word;
+  word-break: keep-all;
+  background-color: $body-background-color;
+}

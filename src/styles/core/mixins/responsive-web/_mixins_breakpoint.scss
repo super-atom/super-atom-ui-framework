@@ -1,0 +1,134 @@
+@import '../../variables/_variables_breakpoint.scss';
+
+// max breakpoint
+@mixin bp-max($point) {
+  @if $point == xs {
+    @media (max-width: $bp-max-xs) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: $bp-max-sm) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: $bp-max-md) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: $bp-max-lg) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: $bp-max-xl) {
+      @content;
+    }
+  }
+}
+
+// min breakpoint
+@mixin bp-min($point) {
+  @if $point == xs {
+    @media (min-width: $bp-min-xs) {
+      @content;
+    }
+  }
+
+  @if $point == sm {
+    @media (min-width: $bp-min-sm) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: $bp-min-md) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: $bp-min-lg) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: $bp-min-xl) {
+      @content;
+    }
+  }
+}
+
+// only breakpoint
+@mixin bp-only($point) {
+  @if $point == xs {
+    @media (max-width: $bp-max-xs) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: $bp-min-sm) and (max-width: $bp-max-sm) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: $bp-min-md) and (max-width: $bp-max-md) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: $bp-min-lg) and (max-width: $bp-max-lg) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: $bp-min-xl) {
+      @content;
+    }
+  }
+}
+
+// max breakpoint set
+@mixin bp-max-set() {
+  @include bp-max(xl) {
+    max-width: $bp-max-xl;
+    @content;
+  }
+
+  @include bp-max(lg) {
+    max-width: $bp-max-lg;
+    @content;
+  }
+
+  @include bp-max(md) {
+    max-width: $bp-max-md;
+    @content;
+  }
+
+  @include bp-max(sm) {
+    max-width: $bp-max-sm;
+    @content;
+  }
+
+  @include bp-max(xs) {
+    max-width: $bp-max-xs;
+    @content;
+  }
+}
+
+// min breakpoint set
+@mixin bp-min-set() {
+  @include bp-min(xs) {
+    min-width: $bp-min-xs;
+    @content;
+  }
+
+  @include bp-min(sm) {
+    min-width: $bp-min-sm;
+    @content;
+  }
+
+  @include bp-min(md) {
+    min-width: $bp-min-md;
+    @content;
+  }
+
+  @include bp-min(lg) {
+    min-width: $bp-min-lg;
+    @content;
+  }
+
+  @include bp-min(xl) {
+    min-width: $bp-min-xl;
+    @content;
+  }
+}

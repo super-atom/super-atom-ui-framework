@@ -1,0 +1,45 @@
+@import '../core';
+
+.button,
+button,
+input,
+textarea,
+select {
+  transition: 0.3s ease-out;
+}
+
+input,
+textarea,
+select {
+  background-color: $white;
+  border: 1px solid $base-color-grey;
+}
+
+input.input {
+  &[data-form-state='normal'] {
+    border-color: $form-state-normal !important;
+  }
+
+  &[data-form-state='focus'] {
+    color: $form-state-focus;
+    border-color: $form-state-focus !important;
+  }
+
+  &[data-form-state='valid'] {
+    color: $form-state-valid;
+    border-color: $form-state-valid !important;
+  }
+
+  &[data-form-state='invalid'] {
+    color: $form-state-invalid;
+    border-color: $form-state-invalid !important;
+  }
+
+  &[class*="-full"] {
+    width: 100%;
+  }
+}
+
+fieldset.fieldset {
+  width: 100%;
+}

@@ -1,0 +1,92 @@
+// * Default Text Style
+$default-font-size: 1.6;
+$default-line-height: 1.5;
+
+// * Spacing
+$default-spacing: (
+  1 : 0.4rem,
+  2 : 0.8rem,
+  3 : 1.2rem,
+  4 : 1.6rem,
+  5 : 2rem,
+  6 : 2.4rem,
+  7 : 2.8rem,
+  8 : 3.2rem,
+  9 : 3.6rem,
+  10 : 4rem,
+  11 : 4.4rem,
+  12 : 4.8rem,
+  13 : 5.2rem,
+  14 : 5.6rem,
+  15 : 6rem,
+  16 : 6.4rem,
+  17 : 6.8rem,
+  18 : 7.2rem,
+  19 : 7.6rem,
+  20 : 8rem,
+);
+
+$spacing-1 : map-get($default-spacing, 1);
+$spacing-2 : map-get($default-spacing, 2);
+$spacing-3 : map-get($default-spacing, 3);
+$spacing-4 : map-get($default-spacing, 4);
+$spacing-5 : map-get($default-spacing, 5);
+$spacing-6 : map-get($default-spacing, 6);
+$spacing-7 : map-get($default-spacing, 7);
+$spacing-8 : map-get($default-spacing, 8);
+$spacing-9 : map-get($default-spacing, 9);
+$spacing-10 : map-get($default-spacing, 10);
+$spacing-11 : map-get($default-spacing, 11);
+$spacing-12 : map-get($default-spacing, 12);
+$spacing-13 : map-get($default-spacing, 13);
+$spacing-14 : map-get($default-spacing, 14);
+$spacing-15 : map-get($default-spacing, 15);
+$spacing-16 : map-get($default-spacing, 16);
+$spacing-17 : map-get($default-spacing, 17);
+$spacing-18 : map-get($default-spacing, 18);
+$spacing-19 : map-get($default-spacing, 19);
+$spacing-20 : map-get($default-spacing, 20);
+
+// * Component : Form State
+$default-form-state-normal: $base-color-grey-5;
+$default-form-state-hover: transparent;
+$default-form-state-focus: $blue-7;
+$default-form-state-active: $teal-7;
+$default-form-state-disabled: $grey-3;
+$default-form-state-read-only: initial;
+$default-form-state-valid: $green-7;
+$default-form-state-invalid: $red-7 !default;
+
+// * Component : Button
+$default-button-font: revert;
+$default-button-font-size: 1.6rem;
+$default-button-padding: $spacing-2 $spacing-4;
+$default-button-min-height: 4rem;
+$default-button-line-height: 2rem;
+$default-button-border-width: 1px;
+$default-button-border-style: solid;
+$default-button-border-color: $color-main;
+$default-button-border-radius: 0.5rem;
+$default-button-background-color: $color-main;
+$default-button-box-shadow: revert;
+
+// * Component : Input
+$default-input-font-size: 1.6rem;
+$default-input-padding: $spacing-2 $spacing-4;
+$default-input-min-height: 4rem;
+$default-input-line-height: 1;
+$default-input-border-width: 1px;
+$default-input-border-style: solid;
+$default-input-border-color: $base-color-black;
+$default-input-border-radius: 0.5rem;
+$default-input-background-color: $white;
+
+// * Component : Checkbox
+$default-input-checkbox-font-size: 1.6rem;
+$default-input-checkbox-size: 2rem;
+$default-input-checkbox-color: $color-main;
+
+// * Component : Radio
+$default-input-radio-font-size: 1.6rem;
+$default-input-radio-size: 2rem;
+$default-input-radio-color: $color-main;

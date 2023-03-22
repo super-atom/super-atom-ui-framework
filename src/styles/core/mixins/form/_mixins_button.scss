@@ -1,0 +1,26 @@
+@mixin button($font,
+  $padding: $default-button-padding,
+  $border-width: $default-button-border-width,
+  $border-style: $default-button-border-style,
+  $border-color: $default-button-border-color,
+  $border-radius: $default-button-border-radius,
+  $background-color: $default-button-background-color,
+  $line-height: $default-button-line-height,
+  $min-height: $default-button-min-height,
+  $box-shadow: $default-button-box-shadow
+) {
+  font: $font;
+  min-height: $min-height;
+  padding: $padding;
+  line-height: $line-height;
+  background-color: $background-color;
+  border: $border-width $border-style $border-color;
+  @if($box-shadow) {
+    box-shadow: $box-shadow;
+  }
+  @if ($border-radius != 0) {
+    border-radius: $border-radius;
+  }
+
+  @content;
+}

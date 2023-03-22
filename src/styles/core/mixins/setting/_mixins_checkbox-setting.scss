@@ -1,0 +1,9 @@
+
+@mixin checkbox-setting() {
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: $form-state-disabled;
+    border-color: $form-state-disabled;
+  }
+}

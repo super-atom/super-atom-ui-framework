@@ -1,0 +1,175 @@
+.page-codinglist {
+  margin: 0;
+}
+
+.page-codinglist header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: #212121;
+}
+.page-codinglist header > h1 {
+  padding: 24px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 24px;
+}
+.page-codinglist header > a {
+  margin-right: 40px;
+  color: #fff;
+}
+
+.page-codinglist .main {
+  margin-top: 100px;
+  padding: 24px;
+}
+
+.page-codinglist .srch-bar .count {
+  right: 0;
+  bottom: 0;
+  color: #666;
+}
+.page-codinglist .srch-bar i {
+  font-weight: 700;
+  font-style: normal;
+}
+.page-codinglist .srch-bar .conti {
+  color: #f78e16;
+}
+.page-codinglist .srch-bar .comp {
+  color: #0d7feb;
+}
+
+.page-codinglist .tbl-base {
+  margin-top: 20px;
+}
+.page-codinglist .tbl-base table {
+  border-collapse: collapse;
+}
+.page-codinglist .tbl-base thead {
+  background: #333;
+}
+.page-codinglist .tbl-base thead th {
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  border-right: 1px #999 solid;
+}
+.page-codinglist .tbl-base thead tr + tr > th {
+  border-top: 1px #999 solid;
+}
+.page-codinglist .tbl-base tbody tr {
+  background: #fff;
+}
+.page-codinglist .tbl-base tbody td {
+  min-height: 30px;
+  padding: 5px 10px;
+  color: #aaa;
+  text-align: center;
+  border-right: 1px #dbdbdb solid;
+  border-bottom: 1px #dbdbdb solid;
+}
+.page-codinglist .tbl-base thead th:last-child,
+.page-codinglist .tbl-base tbody td:last-child {
+  border-right: 0;
+}
+.page-codinglist .tbl-base thead tr:nth-child(2) th:last-child {
+  border-right: 1px #999 solid;
+}
+.page-codinglist .tbl-base tr.ing {
+  background: #fff5da;
+}
+.page-codinglist .tbl-base tr.ing > td {
+  color: #212121;
+}
+.page-codinglist .tbl-base tr.ing > td:nth-child(2) {
+  color: #f78e16;
+}
+.page-codinglist .tbl-base tr.complete {
+  background: #def7ff;
+}
+.page-codinglist .tbl-base tr.complete > td {
+  color: #212121;
+}
+.page-codinglist .tbl-base tr.complete > td:nth-child(2) {
+  color: #1683ff;
+}
+.page-codinglist .tbl-base tr.hold {
+  background: #f6f6f6;
+}
+.page-codinglist .tbl-base tr.hold > td {
+  color: #ccc;
+}
+.page-codinglist .tbl-base tr.del {
+  background: #f6f6f6;
+  pointer-events: none;
+}
+.page-codinglist .tbl-base tr.del + tr.modify {
+  background: #f6f6f6;
+  pointer-events: none;
+}
+.page-codinglist .tbl-base tr.del > td {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.page-codinglist .tbl-base tr.nothing {
+  background: transparent;
+}
+.page-codinglist .tbl-base tr.nothing > td {
+  height: 300px;
+}
+.page-codinglist .tbl-base tr.modify > td {
+  color: #80001c;
+  vertical-align: top;
+  background: #ffe3f1;
+}
+.page-codinglist .tbl-base tr.modify > td:first-child {
+  text-align: right;
+}
+.page-codinglist .tbl-base tr.del + tr.modify > td {
+  color: #aaa;
+  text-decoration: line-through;
+  background: unset;
+  opacity: 0.5;
+}
+.page-codinglist .tbl-base .txt-l {
+  text-align: left;
+}
+.page-codinglist .tbl-base .strong {
+  color: inherit;
+  font-weight: 700;
+}
+.page-codinglist .tbl-base a {
+  color: #1652f5;
+  text-decoration: underline;
+}
+.page-codinglist .tbl-base a:hover {
+  text-decoration: none;
+}
+.page-codinglist .tbl-base tr > td > span {
+  color: inherit;
+  opacity: 0.3;
+}
+.page-codinglist .tbl-base tr > td > span.last {
+  opacity: 1;
+}
+.page-codinglist .tbl-base tr.del > td > span {
+  color: #ccc !important;
+}
+
+.page-codinglist .btn-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 1px #bdbdbd solid;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

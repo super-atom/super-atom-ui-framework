@@ -1,0 +1,7 @@
+@import './core/core.scss';
+
+.token-button {
+  @include button($font:$btn-typo-a, $box-shadow: $btn-shadow-gray, $background-color: $btn-color-brown, $border-radius: $btn-radius-l, $min-height:$btn-sizing-height);
+  border-color: $btn-color-brown;
+  color: white;
+}

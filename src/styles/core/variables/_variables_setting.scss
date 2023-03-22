@@ -1,0 +1,62 @@
+@import './variables_default';
+@import '../../../tokens/output/variables.scss';
+
+$color-main: #574538;
+$color-sub: #EBE4CC;
+$color-status-warning: #D25C27;
+
+// * Component : Form State
+$form-state-normal: $default-form-state-normal;
+$form-state-hover: $default-form-state-hover;
+$form-state-focus: $default-form-state-focus;
+$form-state-active: $default-form-state-active;
+$form-state-disabled: $default-form-state-disabled;
+$form-state-read-only: $default-form-state-read-only;
+$form-state-valid: $default-form-state-valid;
+$form-state-invalid: $default-form-state-invalid;
+
+// * Component : Button
+$button-font: $default-button-font;
+$button-font-size: $default-button-font-size;
+$button-padding: $default-button-padding;
+$button-min-height: $default-button-min-height;
+$button-line-height: $default-button-line-height;
+$button-border-width: $default-button-border-width;
+$button-border-style: $default-button-border-style;
+$button-border-color: $default-button-border-color;
+$button-border-radius: $default-button-border-radius;
+$button-background-color: $default-button-background-color;
+$button-box-shadow: $default-button-box-shadow;
+
+// $button-font: $btn-typo-a;
+// $button-font-size: $btn-font-size;
+// $button-padding: $default-button-padding;
+// $button-min-height: $default-button-min-height;
+// $button-line-height: $default-button-line-height;
+// $button-border-width: $default-button-border-width;
+// $button-border-style: $default-button-border-style;
+// $button-border-color: $btn-color-brown;
+// $button-border-radius: $btn-radius-s;
+// $button-background-color: $btn-color-brown;
+// $button-box-shadow: $btn-shadow-gray;
+
+// * Component : Input
+$input-font-size: $default-input-font-size;
+$input-padding: $default-input-padding;
+$input-min-height: $default-input-min-height;
+$input-line-height: $default-input-line-height;
+$input-border-width: $default-input-border-width;
+$input-border-style: $default-input-border-style;
+$input-border-color: $default-input-border-color;
+$input-border-radius: $default-input-border-radius;
+$input-background-color: $default-input-background-color;
+
+// * Component : Checkbox
+$input-checkbox-font-size: $default-input-checkbox-font-size;
+$input-checkbox-size: $default-input-checkbox-size;
+$input-checkbox-color: $default-input-checkbox-color;
+
+// * Component : Checkbox
+$input-radio-font-size: $default-input-radio-font-size;
+$input-radio-size: $default-input-radio-size;
+$input-radio-color: $default-input-radio-color;

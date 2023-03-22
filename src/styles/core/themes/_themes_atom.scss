@@ -1,0 +1,19 @@
+@import '../variables/variables';
+$theme-atom: (
+  color: (
+    main: $deep-purple-5,
+    sub: $white,
+  ),
+  body: (
+    bg: $white,
+  ),
+  header: (
+    bg: $deep-purple-5,
+  ),
+  button: (
+    data-type: map-get($buttons, data-type),
+    padding: rem(6) rem(10),
+    border: initial,
+    border-radius: 0
+  ),
+);

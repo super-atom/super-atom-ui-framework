@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>퍼블리싱 리스트</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no, user-scalable=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="codingList.js"></script>
+    <link rel="stylesheet" href="codingList.css" type="text/css" />
+  </head>
+  <body class="page-codinglist">
+    <!-- 참고 : http://awa.kr/ecs/asset/user/guide/codinglist.html -->
+    <div class="wrap">
+      <header>
+        <h1>퍼블리싱 리스트</h1>
+        <!--ECS-->
+
+        <a href="./foundation.html">파운데이션</a>
+        <a href="./component.html">스타일가이드</a>
+      </header>
+
+      <div class="main">
+        <div class="srch-bar">
+          <span class="ui-select">
+            <label for="projState">진행상태</label> &nbsp;
+            <select
+              id="projState"
+              name="proj-state"
+              onChange="javascript:selSorting();"
+            >
+              <option value="">전체</option>
+              <option value="0">진행대기</option>
+              <option value="1">진행중</option>
+              <option value="2">완료</option>
+              <option value="3">보류</option>
+              <option value="4">제외</option>
+            </select>
+          </span>
+          <div class="count"></div>
+        </div>
+
+        <div class="tbl-base">
+          <table col>
+            <caption style="display: none">
+              퍼블리싱 리스트
+            </caption>
+            <colgroup>
+              <col width="40" />
+              <col width="80" />
+              <col width="90" />
+              <col width="90" />
+              <col width="120" />
+              <col width="60" />
+              <col width="400" />
+              <col width="100" />
+              <col width="60" />
+              <col width="60" />
+              <col width="60" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" rowspan="2">No.</th>
+                <th scope="col" rowspan="2">진행상태</th>
+                <th scope="col" rowspan="2">시작</th>
+                <th scope="col" rowspan="2">완료</th>
+                <th scope="col" rowspan="2">WBS_ID</th>
+                <th scope="col" rowspan="2">Category</th>
+                <th scope="col" rowspan="2">Path</th>
+                <th scope="col" rowspan="2">Work</th>
+                <th scope="col" rowspan="2">화면 Type</th>
+                <th scope="col" rowspan="2">비고</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn-top">
+      <span>Top</span>
+    </button>
+  </body>
+</html>

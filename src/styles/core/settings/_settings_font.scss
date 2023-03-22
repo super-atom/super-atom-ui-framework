@@ -1,0 +1,68 @@
+@import '../core';
+:root {
+  font-size: $root-font-size;
+}
+
+.h1 {
+  @include base-font-sizes-h1;
+}
+
+.h2 {
+  @include base-font-sizes-h2;
+}
+
+.h3 {
+  @include base-font-sizes-h3;
+}
+
+.h4 {
+  @include base-font-sizes-h4;
+}
+
+.h5 {
+  @include base-font-sizes-h5;
+}
+
+.h6 {
+  @include base-font-sizes-h6;
+}
+
+// * Heading
+.font-heading-1 {
+  @include font-heading-1;
+}
+.font-heading-2 {
+  @include font-heading-2;
+}
+.font-heading-3 {
+  @include font-heading-3;
+}
+.font-heading-4 {
+  @include font-heading-4;
+}
+
+// * Body
+.font-body-1-r {
+  @include font-body-1(r);
+}
+.font-body-1-m {
+  @include font-body-1(m);
+}
+.font-body-1-b {
+  @include font-body-1(b);
+}
+
+.font-body-2-r {
+  @include font-body-2(r);
+}
+.font-body-2-b {
+  @include font-body-2(b);
+}
+.font-body-3 {
+  @include font-body-3;
+}
+
+// * Etc
+.font-caption {
+  @include font-caption;
+}

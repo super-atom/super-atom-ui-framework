@@ -1,0 +1,32 @@
+@import './_variables_setting.scss';
+$components-map: (
+  button: (
+    font: $button-font,
+    font-size: $button-font-size,
+    padding: $button-padding,
+    border-width: $button-border-width,
+    border-style: $button-border-style,
+    border-color: $button-border-color,
+    border-radius: $button-border-radius,
+    background-color: $button-background-color,
+    box-shadow: $button-box-shadow,
+    line-height: $button-line-height,
+    min-height: $button-min-height
+  ),
+  input: (
+    font-size: $input-font-size,
+    padding: $input-padding,
+    border-width: $input-border-width,
+    border-style: $input-border-style,
+    border-color: $input-border-color,
+    border-radius: $input-border-radius,
+    background-color: $input-background-color,
+    line-height: $input-line-height,
+    min-height: $input-min-height
+  ),
+  checkbox: (
+    font-size: $input-checkbox-font-size,
+    size: $input-checkbox-size,
+    color: $input-checkbox-color
+  )
+);

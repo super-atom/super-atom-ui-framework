@@ -1,0 +1,13 @@
+@import './core/core.scss';
+@import './grid.scss';
+@import './component.scss';
+@import './utility.scss';
+@import './guide.scss'; // !!! 빌드 시 주석처리 필요
+
+// * Layout
+.wrapper {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+

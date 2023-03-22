@@ -1,0 +1,95 @@
+@import './_variables_color';
+@import './_variables_breakpoint';
+@import './_variables_typeface';
+
+//* Unit Base Font Size
+$base-em-size: 16px !default;
+$base-rem-size: 16px !default;
+
+// * Root Font Size
+// Root
+$root-font-size: 62.5%;
+
+// Body Default Settings
+$body-font-color: $base-color-grey-9 !default;
+$body-font-size: 1.6rem !default;
+$body-font-weight: 400 !default;
+$body-font-family: $base-font !default;
+$body-letter-spacing: $base-font-letter-spacing !default;
+$body-line-height: 1.5 !default;
+$body-background-color: white !default;
+
+// * Responsive Base Heading Element Font Size
+$base-font-sizes-h1: (
+  $bp-min-xs: (
+    1.3rem,
+  ),
+  $bp-min-md: (
+    1.5rem,
+  ),
+  $bp-min-lg: (
+    2rem,
+  ),
+);
+$base-font-sizes-h2: (
+  $bp-min-xs: (
+    1.2rem,
+  ),
+  $bp-min-md: (
+    1.35rem,
+  ),
+  $bp-min-lg: (
+    1.5rem,
+  ),
+);
+$base-font-sizes-h3: (
+  $bp-min-xs: (
+    1.1rem,
+  ),
+  $bp-min-md: (
+    1.2rem,
+  ),
+  $bp-min-lg: (
+    1.3rem,
+  ),
+);
+$base-font-sizes-h4: (
+  $bp-max-md: (
+    1rem,
+  ),
+  $bp-min-lg: (
+    1.17rem,
+  ),
+);
+$base-font-sizes-h5: (
+  $bp-min-xs: (
+    0.9rem,
+  ),
+);
+$base-font-sizes-h6: (
+  $bp-min-xs: (
+    0.8rem,
+  ),
+);
+
+// * Responsive Base Custom Font Size
+$base-font-sizes: (
+  $bp-max-sm: (
+    1.4rem,
+  ),
+  $bp-min-md: (
+    1.6rem,
+  ),
+);
+
+$base-font-sizes-title: (
+  $bp-min-xs: (
+    2rem,
+  ),
+  $bp-min-md: (
+    2.4rem,
+  ),
+  $bp-min-lg: (
+    3.2rem,
+  ),
+);

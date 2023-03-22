@@ -33,10 +33,6 @@
           "fonts": "./src/assets/fonts",
         }
       }
-    ],
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-class-properties",
-    "babel-plugin-transform-es3-property-literals",
-    "babel-plugin-transform-es3-member-expression-literals"
+    ]
   ]
 }

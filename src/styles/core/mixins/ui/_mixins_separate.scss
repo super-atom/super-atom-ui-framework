@@ -1,0 +1,27 @@
+@mixin separate($color : $base-color-grey) {
+  display: flex;
+  height: auto;
+
+  > * {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    & + * {
+      &:before {
+        @include pseudo();
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 60%;
+        background-color: $color;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

@@ -1,10 +1,10 @@
 const path = require('path');
-const cssnano = require('cssnano');
 const postcssUrl = require('postcss-url');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssSimpleVars = require('postcss-simple-vars');
 const postcssCascadeLayers = require('@csstools/postcss-cascade-layers');
 const postcssSortMediaQueries = require('postcss-sort-media-queries');
+const postcssSass = require('@csstools/postcss-sass');
 
 module.exports = (api) => {
   return {
@@ -18,6 +18,7 @@ module.exports = (api) => {
       'postcss-reporter',
       'postcss-extend-rule',
       'postcss-flexbugs-fixes',
+      postcssSass(),
       postcssUrl(),
       postcssPresetEnv({
         stage: 0,
@@ -29,8 +30,7 @@ module.exports = (api) => {
       postcssSortMediaQueries(),
       'postcss-advanced-variables',
       'lost',
-      'autoprefixer',
-      api.env === 'production' ? cssnano({ preset: 'default' }): false,
+      'autoprefixer'
     ],
   };
 };

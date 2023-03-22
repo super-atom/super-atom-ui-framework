@@ -1,0 +1,46 @@
+
+@mixin input(
+  $font-size: $default-input-font-size,
+  $padding: $default-input-padding,
+  $border-width: $default-input-border-width,
+  $border-style: $default-input-border-style,
+  $border-color: $default-input-border-color,
+  $border-radius: $default-input-border-radius,
+  $background-color: $default-input-background-color,
+  $line-height: $default-input-line-height,
+  $min-height: $default-input-min-height
+) {
+  min-height: $min-height;
+  padding: $padding;
+  font-size: $font-size;
+  line-height: $line-height;
+  background-color: $white;
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  font-family: inherit;
+  vertical-align: middle;
+  outline: none;
+
+  &:focus {
+    border-color: $form-state-focus;
+  }
+
+  &:read-only {
+    background-color: $form-state-read-only;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: unset;
+    }
+  }
+
+  &:disabled {
+    background-color: $form-state-disabled;
+    cursor: not-allowed;
+  }
+
+  @content;
+}
