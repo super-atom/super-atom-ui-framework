@@ -5,13 +5,12 @@ const PATH = require('../config/path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const HtmlWebpackInjector = require('html-webpack-injector');
 
 const htmlPlugins = generateHtmlPlugins('../src/views/pages');
 module.exports = {
   entry: {
-    common: './src/js/common.js',
     style: './src/js/style.js',
-    guide: './src/js/guide.js',
   },
   target: ['web', 'es5'],
   output: {
@@ -35,11 +34,9 @@ module.exports = {
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset',
-        parser: {
-          dataUrlCondition: {
-            maxSize: 5000 * 1024,
-          },
-        },
+        generator: {
+          filename: 'assets/fonts/[name].[ext]'
+        }
       },
       {
         test: /\.js$/,
@@ -85,20 +82,14 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
-      'window.jQuery': 'jquery',
-      _: 'lodash',
-    }),
     new WebpackManifestPlugin({
       fileName: 'assets.json',
       basePath: '/',
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [{ from: 'src', to: './' }],
-    // })
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'src', to: './' }],
+    })
+    // new HtmlWebpackInjector()
   ].concat(htmlPlugins),
 };
 function generateHtmlPlugins(templateDir) {
@@ -111,7 +102,7 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       minify: false,
-      chunks: ['common', 'style'],
+      chunks: ['style'],
     });
   });
 }

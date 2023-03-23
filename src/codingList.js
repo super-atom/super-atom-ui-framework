@@ -12,7 +12,7 @@ var listArray = [];
 function loadData() {
   $.ajax({
     method: 'GET',
-    url: 'codinglist.json',
+    url: './codingList.json',
     dataType: 'json',
   })
     .done(function (data) {

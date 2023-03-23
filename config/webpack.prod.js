@@ -10,9 +10,9 @@ const { cssLoaders } = require('./util');
 const configureOptimization = () => {
   return {
     minimize: false,
-    // minimizer: [
-    //   new TerserPlugin(),
-    // ],
+    minimizer: [
+      new TerserPlugin(),
+    ],
     splitChunks: {
       chunks: 'async',
       minSize: 20000,
@@ -68,8 +68,8 @@ module.exports = merge(common, {
       chunkFilename: 'styles/[name].css',
     }),
 
-    new CopyWebpackPlugin({
-      patterns: [{ from: 'src', to: './' }],
-    })
+    // new CopyWebpackPlugin({
+    //   patterns: [{ from: 'src', to: './' }],
+    // })
   ],
 });

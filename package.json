@@ -12,7 +12,8 @@
     "clean": "rimraf dist",
     "serve": "webpack serve",
     "design-tokens": "node ./src/tokens/transformTokens.js",
-    "design-tokens-studio": "node ./src/tokens/build-tokens.js"
+    "design-tokens-studio": "node ./src/tokens/build-tokens.js",
+    "gulp": "gulp"
   },
   "repository": "git+https://github.com/super-atom/super-atom-ui-framework.git",
   "author": "super-atom <super0atom@gmail.com>",
@@ -39,8 +40,8 @@
     "core-js": "^3.29.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
+    "dart-sass": "^1.25.0",
     "deepmerge": "^4.3.0",
-    "doiuse": "^4.4.1",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
     "eslint-config-prettier": "^8.7.0",
@@ -51,6 +52,7 @@
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.3",
     "html-loader": "^4.2.0",
+    "html-webpack-injector": "^1.1.4",
     "html-webpack-plugin": "^5.5.0",
     "lost": "^9.0.1",
     "mini-css-extract-plugin": "^2.7.3",
@@ -92,8 +94,5 @@
     "webpack-nano": "^1.1.1"
   },
   "packageManager": "yarn@3.4.1",
-  "dependencies": {
-    "jquery": "^3.6.4",
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }

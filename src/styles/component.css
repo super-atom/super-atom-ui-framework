@@ -1,0 +1,12 @@
+.token-button {
+  font: 300 24px/100% Spoqa Han Sans Neo;
+  min-height: 64px;
+  padding: 0.8rem 1.6rem;
+  line-height: 2rem;
+  background-color: #574538;
+  border: 1px solid #574538;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border-color: #574538;
+  color: white;
+}/*# sourceMappingURL=component.css.map */

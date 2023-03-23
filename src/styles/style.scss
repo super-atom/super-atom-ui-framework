@@ -1,13 +1,156 @@
 @import './core/core.scss';
+@import './core/common.scss';
 @import './grid.scss';
 @import './component.scss';
 @import './utility.scss';
-@import './guide.scss'; // !!! 빌드 시 주석처리 필요
+
+$page-header-height: 8rem;
+$inner-width: 1280px;
+
+html {
+  scroll-behavior: smooth;
+}
 
 // * Layout
 .wrapper {
   margin: 0 auto;
-  width: 1280px;
+  width: $inner-width;
 }
 
+.inner,
+.section-inner {
+  width: $inner-width;
+  margin: 0 auto;
+}
 
+#header {
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+  padding: 0 2.4rem;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+
+  .header__title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
+#content {
+  position: relative;
+}
+
+#footer {
+  padding: $spacing-20 0;
+  background-color: #fff;
+  height: 24rem;
+  background-color: $color-main;
+  color: white;
+}
+
+// * Page
+.page-home {
+  .section {
+    padding: $spacing-20 0;
+  }
+
+  .section__title {
+    @include font-heading-1;
+    margin-bottom: $spacing-12;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .section-main-visual {
+    height: 100vh;
+
+    .scrollDist {
+      z-index: -1;
+      position: fixed;
+    }
+
+    .main {
+      position: absolute;
+    }
+
+    .cloud2 {
+      animation: side 100s ease-in-out infinite;
+      @keyframes side {
+        20%, 60%, 100% {
+          transform: matrix(1,0,0,1,-100,-150);
+        }
+        40%, 80% {
+          transform: matrix(1,0,0,1,0,-150);
+        }
+      }
+    }
+    .cloud3 {
+      animation: side2 100s ease-in-out infinite;
+      @keyframes side2 {
+        20%, 60%, 100% {
+          transform: matrix(1,0,0,1,100,-50);
+        }
+        40%, 80% {
+          transform: matrix(1,0,0,1,0,-50);
+        }
+      }
+    }
+  }
+
+  .section-navigation {
+    position: relative;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+
+      .nav__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .img {
+          display: block;
+          width: 16rem;
+          height: 16rem;
+          margin-bottom: $spacing-4;
+          border-radius: 100%;
+          background-color: $color-main;
+        }
+      }
+    }
+  }
+
+  .section-monorail {
+    text-align: center;
+  }
+
+  .section-others {
+    .item__list-wrap {
+      display: flex;
+      flex-direction: column;
+
+      .item__list {
+        display: flex;
+        &:not(:first-child) {
+          margin-top: $spacing-16;
+        }
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+        }
+
+        .txt-wrap {
+          padding: 0 $spacing-8;
+        }
+      }
+    }
+  }
+}
