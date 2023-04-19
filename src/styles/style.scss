@@ -3,18 +3,23 @@
 @import './grid.scss';
 @import './component.scss';
 @import './utility.scss';
+@import './variable.scss';
+@import './module.scss';
+@import './page.scss';
 
-$page-header-height: 8rem;
-$inner-width: 1280px;
-
+// * tag setting
 *:focus {
   outline: 1px dotted #212121;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 3px auto -webkit-focus-ring-color;
+}
+
+img {
+  @include rwd-img;
 }
 
 // * Layout
 .wrapper {
-  width: $inner-width;
+  max-width: $inner-width;
   margin: 0 auto;
 }
 
@@ -22,17 +27,20 @@ $inner-width: 1280px;
   position: relative;
 }
 
-.inner,
-.section-inner {
-  width: $inner-width;
+.layout-container {
+  max-width: $inner-width;
   margin: 0 auto;
+
+  &-full {
+    max-width: 100%;
+  }
 }
 
 #header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: z(header);
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -136,12 +144,6 @@ $inner-width: 1280px;
   }
 }
 
-#content {
-  position: relative;
-  min-height: calc(100vh - 24rem);
-  padding-top: 8rem;
-}
-
 #footer {
   height: 24rem;
   padding: $spacing-20 0;
@@ -150,110 +152,9 @@ $inner-width: 1280px;
   background-color: $color-main;
 }
 
-// * Page
-.page-home {
-  .section {
-    padding: $spacing-20 0;
-  }
-
-  .section__title {
-    @include font-heading-1;
-    margin-bottom: $spacing-12;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  .section-main-visual {
-    height: 100vh;
-
-    .scrollDist {
-      position: fixed;
-      z-index: -1;
-    }
-
-    .main {
-      position: absolute;
-    }
-
-    .cloud2 {
-      animation: side 100s ease-in-out infinite;
-      @keyframes side {
-        20%,
-        60%,
-        100% {
-          transform: matrix(1, 0, 0, 1, -100, -150);
-        }
-        40%,
-        80% {
-          transform: matrix(1, 0, 0, 1, 0, -150);
-        }
-      }
-    }
-    .cloud3 {
-      animation: side2 100s ease-in-out infinite;
-      @keyframes side2 {
-        20%,
-        60%,
-        100% {
-          transform: matrix(1, 0, 0, 1, 100, -50);
-        }
-        40%,
-        80% {
-          transform: matrix(1, 0, 0, 1, 0, -50);
-        }
-      }
-    }
-  }
-
-  .section-navigation {
-    position: relative;
-    .nav {
-      @include row;
-
-      .nav__list {
-        @include col(2);
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        .img {
-          display: block;
-          width: 16rem;
-          height: 16rem;
-          margin-bottom: $spacing-4;
-          background-color: $color-main;
-          border-radius: 100%;
-        }
-      }
-    }
-  }
-
-  .section-monorail {
-    text-align: center;
-  }
-
-  .section-others {
-    .item__list-wrap {
-      display: flex;
-      flex-direction: column;
-
-      .item__list {
-        position: relative;
-        display: flex;
-        &:not(:first-child) {
-          margin-top: $spacing-16;
-        }
-
-        &:nth-child(2) {
-          justify-content: flex-end;
-        }
-
-        .txt-wrap {
-          padding: 0 $spacing-8;
-        }
-      }
-    }
-  }
+// * Content
+#content {
+  position: relative;
+  padding-top: $header-height;
+  padding-bottom: $spacing-20;
 }

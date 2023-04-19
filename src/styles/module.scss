@@ -1,0 +1,16 @@
+// * Module
+.menu-nav {
+  display: flex;
+  padding-bottom: $spacing-12;
+
+  .menu-nav__list {
+    .link {
+      display: block;
+      padding: $spacing-3;
+
+      &.active {
+        border-bottom: 3px solid black;
+      }
+    }
+  }
+}

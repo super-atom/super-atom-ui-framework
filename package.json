@@ -1,6 +1,6 @@
 {
   "name": "super-atom-ui-framework",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -12,8 +12,7 @@
     "clean": "rimraf dist",
     "serve": "webpack serve",
     "design-tokens": "node ./src/tokens/transformTokens.js",
-    "design-tokens-studio": "node ./src/tokens/build-tokens.js",
-    "gulp": "gulp"
+    "design-tokens-studio": "node ./src/tokens/build-tokens.js"
   },
   "repository": "git+https://github.com/super-atom/super-atom-ui-framework.git",
   "author": "super-atom <super0atom@gmail.com>",
