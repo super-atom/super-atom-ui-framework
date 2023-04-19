@@ -9,4 +9,113 @@
   border-radius: 16px;
   border-color: #574538;
   color: white;
+}
+
+.accordion {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: auto;
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  padding: 0.8rem 1.6rem;
+  min-height: 5.6rem;
+  color: #1a1a1a;
+}
+
+.accordion__title {
+  width: 100%;
+  color: #1a1a1a;
+}
+
+.accordion__body {
+  display: none;
+  background: #fcfcfc;
+  color: #353535;
+}
+
+.accordion__item {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+.accordion__item > .accordion__header:after {
+  position: relative;
+  float: right;
+  transform: rotate(0deg);
+  transition: 0.3s all;
+  background-image: url("../assets/images/btn-chevron.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.6rem;
+  height: 1.6rem;
+  content: "";
+}
+
+.accordion__icon {
+  position: absolute;
+  top: 1.6rem;
+  left: 0.8rem;
+}
+
+.accordion__icon + .accordion__header {
+  margin-left: 4rem;
+  padding: 0.8rem 1.6rem 0.8rem 0;
+}
+
+.accordion__item.active:last-child .accordion__header {
+  border-radius: none;
+}
+.accordion__item.active > .accordion__header:after {
+  transform: rotate(-180deg);
+}
+
+.tablist {
+  display: flex;
+}
+.tablist[data-type=underline] {
+  margin-bottom: 3.2rem;
+}
+.tablist[data-type=underline] .tab {
+  cursor: pointer;
+  background-color: white;
+  padding: 0.8rem 0;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.tablist[data-type=underline] .tab:not(:first-of-type) {
+  margin-left: 2.4rem;
+}
+.tablist[data-type=underline] .tab.active {
+  border-bottom: 3px solid #1a1a1a;
+  font-weight: 700;
+}
+.tablist[data-type=round] .tab {
+  transition: 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 4rem;
+  padding: 1rem 1.6rem;
+  color: #9d9d9d;
+  line-height: 1;
+}
+.tablist[data-type=round] .tab + .tab {
+  margin-left: 0.8rem;
+}
+.tablist[data-type=round] .tab.active {
+  border-color: #574538;
+  background-color: #574538;
+  color: #fff;
+  font-weight: 700;
+}
+
+.tabpanel-wrap .tabpanel {
+  display: none;
+}
+.tabpanel-wrap .tabpanel.active {
+  display: block;
 }/*# sourceMappingURL=component.css.map */

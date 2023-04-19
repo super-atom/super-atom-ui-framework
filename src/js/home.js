@@ -1,6 +1,6 @@
 $(function () {
+  $('.img-holder').imageScroll({ container: $('body'), coverRatio: 0.3 });
   console.log('home');
-  // $('.img-holder').imageScroll();
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   gsap.set('.main', {
     position: 'absolute',
@@ -52,5 +52,44 @@ $(function () {
       duration: 1.5,
       ease: 'power1.inOut',
     });
+  });
+
+  const $navList = $('.section-navigation .nav__list');
+  $navList.css({ top: 100, opacity: 0 });
+  ScrollTrigger.create({
+    trigger: '.page-home .section-navigation',
+    start: '-40% 50%',
+    end: 'bottom bottom',
+    endTrigger: 'bottom bottom',
+    onToggle: () => {
+      $navList.each((idx, item) => {
+        gsap.to(item, {
+          ease: Power1.easeOut,
+          duration: 0.5 * ((idx + 1) / 3),
+          opacity: 1,
+          y: -100,
+          delay: 0.3,
+        });
+      });
+    },
+  });
+  const $othersList = $('.section-others .item__list');
+  $othersList.css({ top: 100, opacity: 0 });
+  ScrollTrigger.create({
+    trigger: '.page-home .section-others',
+    start: '-20% 50%',
+    end: 'bottom bottom',
+    endTrigger: 'bottom bottom',
+    onToggle: () => {
+      $othersList.each((idx, item) => {
+        gsap.to(item, {
+          ease: Power1.easeOut,
+          duration: 2 * ((idx + 1) / 3),
+          opacity: 1,
+          y: -100,
+          delay: 0.5,
+        });
+      });
+    },
   });
 });

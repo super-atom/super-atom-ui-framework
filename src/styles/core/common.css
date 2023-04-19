@@ -504,21 +504,29 @@ fieldset.fieldset {
 .font-heading-1 {
   font: 300 1.6rem "LGSmHa", sans-serif;
   font-size: 3.6rem;
+  font-weight: 900;
+  font-weight: 900;
 }
 
 .font-heading-2 {
   font: 300 1.6rem "LGSmHa", sans-serif;
   font-size: 2.8rem;
+  font-weight: 700;
+  font-weight: 700;
 }
 
 .font-heading-3 {
   font: 300 1.6rem "LGSmHa", sans-serif;
   font-size: 2.5rem;
+  font-weight: 500;
+  font-weight: 500;
 }
 
 .font-heading-4 {
   font: 300 1.6rem "LGSmHa", sans-serif;
   font-size: 2rem;
+  font-weight: 300;
+  font-weight: 300;
 }
 
 .font-body-1-r {
@@ -565,64 +573,64 @@ fieldset.fieldset {
 
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("/assets/fonts/SpoqaHanSansNeo-Bold.eot");
-  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("/assets/fonts/SpoqaHanSansNeo-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("/assets/fonts/SpoqaHanSansNeo-Bold.woff") format("woff"), url("/assets/fonts/SpoqaHanSansNeo-Bold.ttf") format("truetype");
+  src: url("../../../../assets/fonts/SpoqaHanSansNeo-Bold.eot");
+  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("../../../../assets/fonts/SpoqaHanSansNeo-Bold.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("../../../../assets/fonts/SpoqaHanSansNeo-Bold.woff") format("woff"), url("../../../../assets/fonts/SpoqaHanSansNeo-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 900;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("/assets/fonts/SpoqaHanSansNeo-Medium.eot");
-  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("/assets/fonts/SpoqaHanSansNeo-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("/assets/fonts/SpoqaHanSansNeo-Medium.woff") format("woff"), url("/assets/fonts/SpoqaHanSansNeo-Medium.ttf") format("truetype");
+  src: url("../../../../assets/fonts/SpoqaHanSansNeo-Medium.eot");
+  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("../../../../assets/fonts/SpoqaHanSansNeo-Medium.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("../../../../assets/fonts/SpoqaHanSansNeo-Medium.woff") format("woff"), url("../../../../assets/fonts/SpoqaHanSansNeo-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("/assets/fonts/SpoqaHanSansNeo-Regular.eot");
-  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("/assets/fonts/SpoqaHanSansNeo-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("/assets/fonts/SpoqaHanSansNeo-Regular.woff") format("woff"), url("/assets/fonts/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+  src: url("../../../../assets/fonts/SpoqaHanSansNeo-Regular.eot");
+  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("../../../../assets/fonts/SpoqaHanSansNeo-Regular.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("../../../../assets/fonts/SpoqaHanSansNeo-Regular.woff") format("woff"), url("../../../../assets/fonts/SpoqaHanSansNeo-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("/assets/fonts/SpoqaHanSansNeo-Light.eot");
-  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("/assets/fonts/SpoqaHanSansNeo-Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("/assets/fonts/SpoqaHanSansNeo-Light.woff") format("woff"), url("/assets/fonts/SpoqaHanSansNeo-Light.ttf") format("truetype");
+  src: url("../../../../assets/fonts/SpoqaHanSansNeo-Light.eot");
+  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("../../../../assets/fonts/SpoqaHanSansNeo-Light.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("../../../../assets/fonts/SpoqaHanSansNeo-Light.woff") format("woff"), url("../../../../assets/fonts/SpoqaHanSansNeo-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("/assets/fonts/SpoqaHanSansNeo-Thin.eot");
-  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("/assets/fonts/SpoqaHanSansNeo-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2"), url("/assets/fonts/SpoqaHanSansNeo-Thin.woff") format("woff"), url("/assets/fonts/SpoqaHanSansNeo-Thin.ttf") format("truetype");
+  src: url("../../../../assets/fonts/SpoqaHanSansNeo-Thin.eot");
+  src: local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), local("SpoqaHanSansNeo"), url("../../../../assets/fonts/SpoqaHanSansNeo-Thin.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2"), url("../../../../assets/fonts/SpoqaHanSansNeo-Thin.woff") format("woff"), url("../../../../assets/fonts/SpoqaHanSansNeo-Thin.ttf") format("truetype");
   font-style: normal;
   font-weight: 100;
 }
 @font-face {
   font-family: "LGSmHa";
-  src: url("/assets/fonts/LGSmHaB.eot");
-  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("/assets/fonts/LGSmHaB.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/LGSmHaB.woff2") format("woff2"), url("/assets/fonts/LGSmHaB.woff") format("woff"), url("/assets/fonts/LGSmHaB.ttf") format("truetype");
+  src: url("../../../../assets/fonts/LGSmHaB.eot");
+  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("../../../../assets/fonts/LGSmHaB.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/LGSmHaB.woff2") format("woff2"), url("../../../../assets/fonts/LGSmHaB.woff") format("woff"), url("../../../../assets/fonts/LGSmHaB.ttf") format("truetype");
   font-style: normal;
   font-weight: 900;
 }
 @font-face {
   font-family: "LGSmHa";
-  src: url("/assets/fonts/LGSmHaSB.eot");
-  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("/assets/fonts/LGSmHaSB.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/LGSmHaSB.woff2") format("woff2"), url("/assets/fonts/LGSmHaSB.woff") format("woff"), url("/assets/fonts/LGSmHaSB.ttf") format("truetype");
+  src: url("../../../../assets/fonts/LGSmHaSB.eot");
+  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("../../../../assets/fonts/LGSmHaSB.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/LGSmHaSB.woff2") format("woff2"), url("../../../../assets/fonts/LGSmHaSB.woff") format("woff"), url("../../../../assets/fonts/LGSmHaSB.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "LGSmHa";
-  src: url("/assets/fonts/LGSmHaR.eot");
-  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("/assets/fonts/LGSmHaR.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/LGSmHaR.woff2") format("woff2"), url("/assets/fonts/LGSmHaR.woff") format("woff"), url("/assets/fonts/LGSmHaR.ttf") format("truetype");
+  src: url("../../../../assets/fonts/LGSmHaR.eot");
+  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("../../../../assets/fonts/LGSmHaR.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/LGSmHaR.woff2") format("woff2"), url("../../../../assets/fonts/LGSmHaR.woff") format("woff"), url("../../../../assets/fonts/LGSmHaR.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "LGSmHa";
-  src: url("/assets/fonts/LGSmHaL.eot");
-  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("/assets/fonts/LGSmHaL.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/LGSmHaL.woff2") format("woff2"), url("/assets/fonts/LGSmHaL.woff") format("woff"), url("/assets/fonts/LGSmHaL.ttf") format("truetype");
+  src: url("../../../../assets/fonts/LGSmHaL.eot");
+  src: local("LGSmHa"), local("LGSmHa"), local("LGSmHa"), url("../../../../assets/fonts/LGSmHaL.eot?#iefix") format("embedded-opentype"), url("../../../../assets/fonts/LGSmHaL.woff2") format("woff2"), url("../../../../assets/fonts/LGSmHaL.woff") format("woff"), url("../../../../assets/fonts/LGSmHaL.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }

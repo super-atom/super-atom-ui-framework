@@ -30,15 +30,19 @@
 // * Heading
 .font-heading-1 {
   @include font-heading-1;
+  font-weight: 900;
 }
 .font-heading-2 {
   @include font-heading-2;
+  font-weight: 700;
 }
 .font-heading-3 {
   @include font-heading-3;
+  font-weight: 500;
 }
 .font-heading-4 {
   @include font-heading-4;
+  font-weight: 300;
 }
 
 // * Body

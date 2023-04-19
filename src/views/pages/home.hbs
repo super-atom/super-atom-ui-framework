@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{> ../partials/meta}}
+  {{> ../partials/script}}
+  <script src="js/home.js"></script>
+  {{> ../partials/link}}
+  <title>Home</title>
+</head>
+<body class="page-home" data-scroll-container>
+  {{> ../partials/header}}
+  <div class="content" id="content">
+    <section class="section section-main-visual pb-0">
+      <div class="scrollDist"></div>
+      <div class="main">
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <mask id="m">
+            <g class="cloud1">
+              <rect fill="#fff" width="100%" height="801" y="799" />
+              <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
+            </g>
+          </mask>
+
+          <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
+          <image class="mountBg" xlink:href="https://assets.codepen.io/721952/mountBg.png" width="1200" height="800"/>
+          <image class="mountMg" xlink:href="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800"/>
+          <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>
+          <image class="mountFg" xlink:href="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800"/>
+          <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
+          <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
+          <g mask="url(#m)">
+            <rect fill="#fff" width="100%" height="100%" />
+          </g>
+        </svg>
+      </div>
+    </section>
+    <section class="section section-navigation pt-0">
+      <div class="section-inner">
+        <h2 class="section__title" id="secNavTitle" data-i18n="0.data">자주 찾는 메뉴</h2>
+        <nav class="nav">
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList1" data-i18n="1.data">온라인 예매</span>
+          </a>
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList2" data-i18n="2.data">모노레일</span>
+          </a>
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList3" data-i18n="3.data">공지사항</span>
+          </a>
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList4" data-i18n="4.data">이용안내</span>
+          </a>
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList5" data-i18n="5.data">가이드맵</span>
+          </a>
+          <a href="" class="nav__list anchor">
+            <span class="img"></span>
+            <span class="txt font-heading-3" id="secNavList6" data-i18n="6.data">지금 화담숲</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+      <div class="img-holder" data-image="https://raw.github.com/pederan/ImageScroll/master/demo/img/autumn_season-1600x900.jpg" data-width="1600" data-height="900"></div>
+    <section class="section section-monorail">
+      <div class="section-inner">
+        <div class="container">
+        <h2 class="section__title">모노레일 잔여 수량</h2>
+          <p class="font-heading-3">금일은 휴원일입니다.</p>
+          <p class="mt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero animi necessitatibus in qui maiores et incidunt cum numquam sequi, similique tempora adipisci itaque eos ex facilis laudantium minima. In, incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sapiente deserunt pariatur, molestias similique quos sit quaerat quidem libero saepe vitae eaque magni cupiditate ea repellat laborum! Alias, vitae dolor.</p>
+        </div>
+      </div>
+    </section>
+      <div class="img-holder" data-image="https://raw.github.com/pederan/ImageScroll/master/demo/img/german_landscapes-1600x900.jpg" data-width="1600" data-height="900"></div>
+    <section class="section section-others">
+      <div class="section-inner">
+        <div class="container">
+          <div class="item__list-wrap">
+            <div class="item__list">
+              <img src="https://www.hwadamsup.com/images/main/img-main-seasonVideo.jpg" class="img" alt="">
+              <div class="txt-wrap">
+                <h2 class="font-heading-1">계절 영상</h2>
+                <p class="font-heading-3">랜선으로 만나는 화담숲</p>
+                <p class="font-heading-4">영상을 통해 사계절마다 변하는 정취를 느껴보세요.</p>
+              </div>
+            </div>
+            <div class="item__list">
+              <div class="txt-wrap">
+                <h2 class="font-heading-1">이벤트</h2>
+                <p class="font-heading-3">화담숲 200% 즐기기</p>
+                <p class="font-heading-4">다양한 이벤트와 프로그램을 만나보세요.</p>
+              </div>
+              <img src="https://www.hwadamsup.com/images/main/img-main-event.jpg" class="img" alt="">
+            </div>
+            <div class="item__list">
+              <img src="https://www.hwadamsup.com/images/main/img-main-guide.jpg" class="img" alt="">
+              <div class="txt-wrap">
+                <h2 class="font-heading-1">이달의 이용 안내</h2>
+                <p class="font-heading-3">화담숲 100% 사전 예약제 운영</p>
+                <p class="font-heading-4">티켓 발권 없이 전송된 QR코드로 편리하게 입장하세요.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </div>
+  {{> ../partials/footer}}
+</body>
+</html>

@@ -67,9 +67,5 @@ module.exports = merge(common, {
       filename: 'styles/[name].css',
       chunkFilename: 'styles/[name].css',
     }),
-
-    // new CopyWebpackPlugin({
-    //   patterns: [{ from: 'src', to: './' }],
-    // })
   ],
 });
