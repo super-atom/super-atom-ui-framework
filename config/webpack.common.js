@@ -5,7 +5,6 @@ const PATH = require('../config/path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const HtmlWebpackInjector = require('html-webpack-injector');
 
 const htmlPlugins = generateHtmlPlugins('../src/views/pages');
 module.exports = {
@@ -47,14 +46,6 @@ module.exports = {
         test: /\.hbs$/,
         use: ['handlebars-loader'],
       },
-      // {
-      //   test: /\.(png|jpe?g|gif)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //     },
-      //   ],
-      // },
     ],
   },
   optimization: {
@@ -89,7 +80,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: 'src', to: './' }],
     })
-    // new HtmlWebpackInjector()
   ].concat(htmlPlugins),
 };
 function generateHtmlPlugins(templateDir) {

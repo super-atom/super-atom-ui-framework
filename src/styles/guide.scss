@@ -64,6 +64,10 @@
   .section-grid {
     .grid {
       text-align: center;
+
+      .grid-item {
+        background-color: $color-main;
+      }
     }
   }
 
@@ -158,7 +162,9 @@
       @for $i from 1 to 21 {
         &:nth-child(#{$i}) {
           width: map-get($default-spacing, $i);
+          // 혹은 width: spacing(1);
           height: map-get($default-spacing, $i);
+          // 혹은 height: spacing(1);
           &::before {
             content: '#{$i}';
           }

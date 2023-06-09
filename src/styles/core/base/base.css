@@ -89,7 +89,8 @@ video {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -172,7 +173,8 @@ table {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   margin: 0;
   overflow: visible;
@@ -303,7 +305,8 @@ button:-moz-focusring,
 
 legend {
   display: table;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 100%;
   padding: 0;
   color: inherit;
@@ -343,7 +346,8 @@ template {
 
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 [type=checkbox]:disabled,

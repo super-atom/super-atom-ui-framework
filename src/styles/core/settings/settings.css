@@ -20,6 +20,7 @@ button,
 input,
 textarea,
 select {
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
 
@@ -267,7 +268,8 @@ fieldset.fieldset {
   padding: 0.8rem 1.6rem;
   background-color: #574538;
   border: 1px solid #574538;
-  box-shadow: revert;
+  -webkit-box-shadow: revert;
+          box-shadow: revert;
   border-radius: 0.5rem;
 }
 .button:hover, .btn:hover, .button:focus, .btn:focus, .button:active, .btn:active {
@@ -327,7 +329,8 @@ fieldset.fieldset {
   width: 1rem;
   height: 1rem;
   background-color: #574538;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .checkbox.disabled, .checkbox[disabled] {
   cursor: not-allowed;
@@ -371,7 +374,8 @@ textarea.textarea {
   background-color: #fff;
   border: 1px solid #1a1a1a;
   border-radius: 0.5rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: inherit;
   vertical-align: middle;
   outline: none;
@@ -406,7 +410,8 @@ input.input {
   background-color: #fff;
   border: 1px solid #1a1a1a;
   border-radius: 0.5rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: inherit;
   vertical-align: middle;
   outline: none;
@@ -454,7 +459,8 @@ input.input-radio[type=radio]:checked::before {
   width: 1rem;
   height: 1rem;
   background-color: #574538;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 input.input-checkbox[type=checkbox] {
@@ -478,13 +484,18 @@ input.input-checkbox[type=checkbox]:checked::before {
   width: 1rem;
   height: 1rem;
   background-color: #574538;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .input-checkbox-wrap,
 .input-radio-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html[data-theme=base] .header {

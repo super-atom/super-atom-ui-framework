@@ -1,6 +1,8 @@
 @import '../variables/variables_breakpoint';
-$spacings: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 44, 48, auto);
+@import '../variables/variables_color-custom';
 
+// * Margin & Padding
+$spacings: (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,auto);
 $sides: (
   "t": "top",
   "b": "bottom",
@@ -21,16 +23,14 @@ $sides: (
     "bottom"
   )
 );
-
 $breakpoints: (
   "": "",
-  "xs": $bp-max-xs,
-  "sm": $bp-max-sm,
-  "md": $bp-max-md,
-  "lg": $bp-max-lg,
-  "xl": $bp-max-xl
+  // "xs": $bp-max-xs,
+  // "sm": $bp-max-sm,
+  // "md": $bp-max-md,
+  // "lg": $bp-max-lg,
+  // "xl": $bp-max-xl
 );
-
 @each $breakName, $breakValue in $breakpoints {
   @each $space in $spacings {
     @each $prefix, $positions in $sides {
@@ -44,27 +44,159 @@ $breakpoints: (
         @media (min-width: $breakValue) {
           .p#{$prefix}-#{$space} {
             @each $pos in $positions {
-              padding-#{$pos}: if($space == auto, $space, #{$space * 0.1}rem) !important;
+              padding-#{$pos}: if($space == auto, $space, #{$space * 0.4}rem) !important;
             }
           }
           .m#{$prefix}-#{$space} {
             @each $pos in $positions {
-              margin-#{$pos}: if($space == auto, $space, #{$space * 0.1}rem) !important;
+              margin-#{$pos}: if($space == auto, $space, #{$space * 0.4}rem) !important;
             }
           }
         }
       } @else {
         .p#{$prefix}-#{$space} {
           @each $pos in $positions {
-            padding-#{$pos}: if($space == auto, $space, #{$space * 0.1}rem) !important;
+            padding-#{$pos}: if($space == auto, $space, #{$space * 0.4}rem) !important;
           }
         }
         .m#{$prefix}-#{$space} {
           @each $pos in $positions {
-            margin-#{$pos}: if($space == auto, $space, #{$space * 0.1}rem) !important;
+            margin-#{$pos}: if($space == auto, $space, #{$space * 0.4}rem) !important;
           }
         }
       }
     }
   }
+}
+
+// * Display
+$displayProps: ("block", "inline-block", "inline", "flex", "grid", "inline-flex", "inline-grid", "table", "inline-table", "list-item", "none", "contents");
+
+@each $disp in $displayProps {
+  .d-#{$disp} {
+    display: #{$disp} !important;
+  }
+}
+
+// * Flexbox
+$alignments: ("center", "space-between", "space-around", "space-evenly", "flex-start", "flex-end");
+.flex-direction-row {
+  flex-direction: row !important;
+}
+.flex-direction-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-direction-col {
+  flex-direction: column !important;
+}
+.flex-direction-col-reverse {
+  flex-direction: column-reverse !important;
+}
+@each $align in $alignments {
+  .justify-#{$align} {
+    justify-content: #{$align} !important;
+  }
+
+  .items-#{$align} {
+    align-items: #{$align} !important;
+  }
+
+  .justify-items-#{$align} {
+    justify-items: #{$align} !important;
+  }
+
+  .content-#{$align} {
+    align-content: #{$align} !important;
+  }
+}
+
+// * Text align
+$textAlignments: ("left", "right", "center", "revert");
+
+@each $textAlign in $textAlignments {
+  .text-#{$textAlign} {
+    text-align: #{$textAlign};
+  }
+}
+
+// * Width & Height
+$valueA: () !default;
+$valueA: map-merge(
+  (
+    null: 'null',
+    min: 'min',
+    max: 'max',
+  ),
+  $valueA
+);
+$valueB: () !default;
+$valueB: map-merge(
+  (
+    width: 'w',
+    height: 'h',
+  ),
+  $valueB
+);
+@each $size, $abbreviation in ($valueA) {
+    @each $property, $firstLetter in ($valueB) {
+        @for $val from 0 through 100 {
+          @if $size == null {
+            .#{$property}-#{$val} {
+              #{$property}: #{$val}+'%' !important
+            }
+          } @else {
+            .#{$size}-#{$property}-#{$val} {
+                #{$abbreviation}-#{$property}: #{$val}+'%' !important
+            }
+          }
+        }
+    }
+}
+
+// * Font-weight
+$fontWeightAlignments: (100, 300, 500, 700, 900);
+@each $fontWeight in $fontWeightAlignments {
+  .fw-#{$fontWeight} {
+    font-weight: #{$fontWeight} !important;
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.word-break-all {
+  word-break: break-all;
+}
+
+// * Font Color
+.color-grey-0 {
+  color: $base-color-grey-0;
+}
+.color-grey-1 {
+  color: $base-color-grey-1;
+}
+.color-grey-2 {
+  color: $base-color-grey-2;
+}
+.color-grey-3 {
+  color: $base-color-grey-3;
+}
+.color-grey-4 {
+  color: $base-color-grey-4;
+}
+.color-grey-5 {
+  color: $base-color-grey-5;
+}
+.color-grey-6 {
+  color: $base-color-grey-6;
+}
+.color-grey-7 {
+  color: $base-color-grey-7;
+}
+.color-grey-8 {
+  color: $base-color-grey-8;
+}
+.color-grey-9 {
+  color: $base-color-grey-9;
 }

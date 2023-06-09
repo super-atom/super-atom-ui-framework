@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.common.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -12,6 +13,7 @@ const configureOptimization = () => {
     minimize: false,
     minimizer: [
       new TerserPlugin(),
+      new CssMinimizerPlugin(),
     ],
     splitChunks: {
       chunks: 'async',

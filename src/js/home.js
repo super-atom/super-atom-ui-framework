@@ -1,5 +1,4 @@
 $(function () {
-  $('.img-holder').imageScroll({ container: $('body'), coverRatio: 0.3 });
   console.log('home');
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   gsap.set('.main', {

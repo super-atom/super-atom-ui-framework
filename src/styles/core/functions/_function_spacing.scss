@@ -1,0 +1,7 @@
+@function spacing($number, $multiple: 0.4 ,$unit:rem) {
+  @if type-of($number) == 'number' {
+    @return ($number * $multiple) + $unit;
+  } @else {
+    @debug '숫자를 입력하세요.';
+  }
+}

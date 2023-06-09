@@ -79,8 +79,7 @@
     "sass-loader": "^13.2.0",
     "style-dictionary": "^3.7.2",
     "style-loader": "^3.3.2",
-    "stylelint": "^15.2.0",
-    "stylelint-config-prettier": "^9.0.5",
+    "stylelint": "^15.7.0",
     "stylelint-prettier": "^3.0.0",
     "stylelint-webpack-plugin": "^4.1.0",
     "terser-webpack-plugin": "^5.3.7",
@@ -93,5 +92,7 @@
     "webpack-nano": "^1.1.1"
   },
   "packageManager": "yarn@3.4.1",
-  "dependencies": {}
+  "dependencies": {
+    "css-minimizer-webpack-plugin": "^5.0.0"
+  }
 }
