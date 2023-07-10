@@ -9,6 +9,9 @@
   $min-height: $default-button-min-height,
   $box-shadow: $default-button-box-shadow
 ) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font: $font;
   min-height: $min-height;
   padding: $padding;

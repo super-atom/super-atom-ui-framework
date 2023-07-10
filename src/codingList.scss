@@ -1,0 +1,267 @@
+.page-codinglist {
+  margin: 0;
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    width: 100%;
+    min-height: 80px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 24px;
+      font-weight: 800;
+      font-size: 24px;
+      @media (max-width: 767px) {
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      margin-right: 20px;
+      padding: 0 16px;
+      color: black;
+      color: #fff;
+      font: revert;
+      text-decoration: none;
+      background-color: black;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: revert;
+
+      @media (max-width: 767px) {
+        min-height: 30px;
+        margin-right: 10px;
+        padding: 0 8px;
+        font-size: 14px;
+      }
+    }
+
+    .guide-list-wrap {
+      @media (max-width: 767px) {
+        padding: 0 16px 16px 16px;
+      }
+    }
+  }
+
+  .main {
+    margin-top: 80px;
+    @media (max-width: 767px) {
+      margin-top: 100px;
+    }
+  }
+
+  .srch-bar {
+    padding: 20px;
+    .count {
+      right: 0;
+      bottom: 0;
+      margin-top: 16px;
+      color: #666;
+    }
+
+    i {
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .conti {
+      color: #f78e16;
+    }
+
+    .comp {
+      color: #0d7feb;
+    }
+  }
+
+  .tbl-base {
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+    overflow-y: scroll;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #333;
+
+      th {
+        height: 30px;
+        color: #fff;
+        text-align: center;
+        border-right: 1px #999 solid;
+      }
+
+      tr + tr > th {
+        border-top: 1px #999 solid;
+      }
+    }
+
+    tbody {
+      tr {
+        background: #fff;
+      }
+
+      td {
+        min-height: 30px;
+        padding: 5px 10px;
+        color: #aaa;
+        text-align: center;
+        border-right: 1px #dbdbdb solid;
+        border-bottom: 1px #dbdbdb solid;
+      }
+    }
+
+    thead th:last-child,
+    tbody td:last-child {
+      border-right: 0;
+    }
+
+    thead tr:nth-child(2) th:last-child {
+      border-right: 1px #999 solid;
+    }
+
+    tr {
+      &.ing {
+        background: #fff5da;
+
+        > td {
+          color: #212121;
+
+          &:nth-child(2) {
+            color: #f78e16;
+          }
+        }
+      }
+
+      &.complete {
+        background: #def7ff;
+
+        > td {
+          color: #212121;
+
+          &:nth-child(2) {
+            color: #1683ff;
+          }
+        }
+      }
+
+      &.hold {
+        background: #f6f6f6;
+
+        > td {
+          color: #ccc;
+        }
+      }
+
+      &.del {
+        background: #f6f6f6;
+        pointer-events: none;
+
+        + tr.modify {
+          background: #f6f6f6;
+          pointer-events: none;
+        }
+
+        > td {
+          text-decoration: line-through;
+          opacity: 0.5;
+        }
+      }
+
+      &.nothing {
+        background: transparent;
+
+        > td {
+          height: 300px;
+        }
+      }
+
+      &.modify > td {
+        color: #80001c;
+        vertical-align: top;
+        background: #ffe3f1;
+
+        &:first-child {
+          text-align: right;
+        }
+      }
+
+      &.del + tr.modify > td {
+        color: #aaa;
+        text-decoration: line-through;
+        background: unset;
+        opacity: 0.5;
+      }
+    }
+
+    .txt-l {
+      text-align: left;
+    }
+
+    .strong {
+      color: inherit;
+      font-weight: 700;
+    }
+
+    a {
+      color: #1652f5;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    tr {
+      > td > span {
+        color: inherit;
+        opacity: 0.3;
+
+        &.last {
+          opacity: 1;
+        }
+      }
+
+      &.del > td > span {
+        color: #ccc !important;
+      }
+    }
+  }
+
+  .btn-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px #bdbdbd solid;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

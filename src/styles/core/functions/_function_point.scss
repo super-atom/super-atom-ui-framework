@@ -1,4 +1,4 @@
-@function spacing($number, $multiple: 0.4 ,$unit:rem) {
+@function point($number, $multiple: 0.4 ,$unit:rem) {
   @if type-of($number) == 'number' {
     @return ($number * $multiple) + $unit;
   } @else {

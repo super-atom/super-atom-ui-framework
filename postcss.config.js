@@ -30,6 +30,7 @@ module.exports = (api) => {
       postcssSortMediaQueries(),
       'postcss-advanced-variables',
       'lost',
+      'tailwindcss',
       'autoprefixer'
     ],
   };

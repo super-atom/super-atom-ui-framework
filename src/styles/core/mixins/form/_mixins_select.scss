@@ -1,21 +1,51 @@
-@mixin select($font-size: rem(14), $padding: 8px, $radius: rem(5)) {
-  width: 100%;
-  height: 40px;
-  padding-right: $padding;
-  padding-left: $padding;
+@mixin select(
+  $font-size: $default-input-font-size,
+  $padding: $default-input-padding,
+  $color: $default-input-color,
+  $border-width: $default-input-border-width,
+  $border-style: $default-input-border-style,
+  $border-color: $default-input-border-color,
+  $border-radius: $default-input-border-radius,
+  $background-color: $default-input-background-color,
+  $line-height: $default-input-line-height,
+  $min-height: $default-input-min-height
+) {
+  box-sizing: border-box;
+  min-height: $min-height;
+  padding: $padding;
+  color: $color;
   font-size: $font-size;
   font-family: inherit;
+  line-height: $line-height;
+  vertical-align: middle;
   background-color: $white;
-  border: rem(1) solid $form-state-normal;
-  border-radius: $radius;
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
   outline: none;
 
   &:focus {
     border-color: $form-state-focus;
   }
 
+  &:read-only {
+    background-color: $form-state-read-only;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: unset;
+    }
+  }
+
   &:disabled {
     background-color: $form-state-disabled;
     cursor: not-allowed;
   }
+
+  &::placeholder {
+    color: $default-input-placeholer-color;
+  }
+
+  @content;
 }

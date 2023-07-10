@@ -1,7 +1,7 @@
-
 @mixin input(
   $font-size: $default-input-font-size,
   $padding: $default-input-padding,
+  $color: $default-input-color,
   $border-width: $default-input-border-width,
   $border-style: $default-input-border-style,
   $border-color: $default-input-border-color,
@@ -10,16 +10,17 @@
   $line-height: $default-input-line-height,
   $min-height: $default-input-min-height
 ) {
+  box-sizing: border-box;
   min-height: $min-height;
   padding: $padding;
+  color: $color;
   font-size: $font-size;
+  font-family: inherit;
   line-height: $line-height;
+  vertical-align: middle;
   background-color: $white;
   border: $border-width $border-style $border-color;
   border-radius: $border-radius;
-  box-sizing: border-box;
-  font-family: inherit;
-  vertical-align: middle;
   outline: none;
 
   &:focus {
@@ -40,6 +41,10 @@
   &:disabled {
     background-color: $form-state-disabled;
     cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $default-input-placeholer-color;
   }
 
   @content;

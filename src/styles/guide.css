@@ -1,3 +1,15 @@
+.wrapper {
+  padding: 2.4rem;
+}
+
+.item-wrap + .item-wrap {
+  margin-top: 1.6rem;
+}
+
+.input + .input {
+  margin-top: 1.6rem;
+}
+
 .page-guide {
   padding-top: 8rem;
 }
@@ -47,7 +59,7 @@
   padding-bottom: 0.8rem;
 }
 .page-guide .section .section__title {
-  margin-right: 0.8rem;
+  margin-right: 1.2rem;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
@@ -318,9 +330,6 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
-.page-guide .section-typeface .typeface + .typeface {
-  margin-top: 2rem;
-}
 .page-guide .section-typeface .typeface .item {
   width: 25%;
   padding: 0.8rem;
@@ -345,13 +354,14 @@
 .page-guide .section-typeface .typeface .item:nth-child(5) {
   font-weight: 900;
 }
-.page-guide .section-typeface .font-wrap {
-  margin-top: 4rem;
+
+.section-typography .font-wrap {
+  margin-top: 0.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.page-guide .section-typeface .font-wrap .font:not(:first-child) {
+.section-typography .font-wrap .font:not(:first-child) {
   margin-left: 3.2rem;
 }
 

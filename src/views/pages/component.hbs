@@ -31,7 +31,6 @@
           <button class="button" data-type="round-reverse">round-reverse button</button>
           <button class="button" data-type="outlined">outlined button</button>
           <button class="button" data-type="outlined-reverse">outlined-reverse button</button>
-          <button class="token-button" data-type="">token button</button>
         </div>
       </section>
       <section class="section section-text-field">
@@ -48,14 +47,14 @@
         </div>
         <div class="section__content">
           <div class="item-wrap">
-            <input class="input" type="text">
-            <input class="input" type="text" data-form-state="normal" value="normal state">
-            <input class="input" type="text" placeholder="disabled input" disabled="">
-            <input class="input" type="text" placeholder="텍스트 입력" value="읽기 전용 텍스트" readonly="">
-            <input class="input" type="text" data-form-state="hover" value="hover state">
-            <input class="input" type="text" data-form-state="focus" value="focus state">
-            <input class="input" type="text" data-form-state="valid" value="valid state">
-            <input class="input" type="text" data-form-state="invalid" value="invalid state">
+            <input class="input width-100" type="text">
+            <input class="input width-100" type="text" data-form-state="normal" value="normal state">
+            <input class="input width-100" type="text" placeholder="disabled input" disabled="">
+            <input class="input width-100" type="text" placeholder="텍스트 입력" value="읽기 전용 텍스트" readonly="">
+            <input class="input width-100" type="text" data-form-state="hover" value="hover state">
+            <input class="input width-100" type="text" data-form-state="focus" value="focus state">
+            <input class="input width-100" type="text" data-form-state="valid" value="valid state">
+            <input class="input width-100" type="text" data-form-state="invalid" value="invalid state">
             <div class="input-wrap">
               <label for="inputColor">Color</label>
               <input class="full-input input" id="inputColor" type="color">
@@ -139,7 +138,7 @@
           <div class="item-wrap">
             <div class="input-radio-wrap">
               <input class="input-radio" id="radio-01" type="radio" name="radio" checked="">
-              <label for="radio-01">라디오</label>
+              <label for="radio-01">라디오 checked</label>
             </div>
             <div class="input-radio-wrap">
               <input class="input-radio" id="radio-02" type="radio" name="radio">
@@ -147,154 +146,22 @@
             </div>
             <div class="input-radio-wrap">
               <input class="input-radio" id="radio-03" type="radio" name="radio" disabled="">
-              <label for="radio-03">라디오</label>
-            </div>
-            <select class="select" title="옵션">
-              <option>전체</option>
-              <option>옵션1</option>
-              <option>옵션2</option>
-              <option>옵션3</option>
-            </select>
-          </div>
-        </div>
-      </section>
-      <section class="section section-dropdown">
-        <div class="section__header">
-          <h2 class="section__title">Dropdown</h2>
-          <p class="section__desc">드롭다운</p>
-        </div>
-        <div class="section__content">
-          <div class="accordion refund js-accordion">
-            <div class="accordion__item js-accordion-item">
-              <div class="accordion__header js-accordion-header">
-                <p class="accordion__title">아코디언1</p>
-              </div>
-
-              <div class="accordion__body js-accordion-body">
-                <div class="accordion__body__contents">
-                  내용
-                </div>
-              </div>
-            </div>
-            <div class="accordion__item js-accordion-item">
-              <div class="accordion__header js-accordion-header">
-                <p class="accordion__title">아코디언2</p>
-              </div>
-
-              <div class="accordion__body js-accordion-body">
-                <div class="accordion__body__contents">
-                  내용
-                </div>
-              </div>
+              <label for="radio-03">라디오 disabled</label>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section-tab">
+      <section class="section section-select">
         <div class="section__header">
-          <h2 class="section__title">tab</h2>
-          <p class="section__desc">탭</p>
+          <h2 class="section__title">Select</h2>
+          <p class="section__desc">셀렉트</p>
         </div>
         <div class="section__content">
-          <div class="ui_tab">
-            <p class="ui__content__title">Type 1</p>
-            <ul class="tablist" role="tablist" data-type="underline">
-              <li id="tab1" class="tab" role="tab" aria-controls="tab-panel1">
-                boo
-              </li>
-              <li id="tab2" class="tab" role="tab" aria-controls="tab-panel2">
-                far
-              </li>
-            </ul>
-            <div class="tabpanel-wrap">
-              <div
-                id="tab-panel1"
-                class="tabpanel"
-                role="tabpanel"
-                aria-labelledby="tab1"
-              >
-                1Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Numquam culpa omnis, at sint accusamus quis pariatur? Animi
-                autem labore dolores ipsa, sapiente accusamus alias.
-                Perspiciatis architecto voluptas neque consequatur soluta.
-              </div>
-              <div
-                id="tab-panel2"
-                class="tabpanel"
-                role="tabpanel"
-                aria-labelledby="tab2"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate delectus repellendus perspiciatis nesciunt earum
-                maiores neque blanditiis ullam repudiandae nobis quidem, non
-                odio accusantium, sed, reiciendis corporis perferendis illo
-                quis?
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-segment-selection">
-        <div class="section__header">
-          <h2 class="section__title">Segment selection</h2>
-          <p class="section__desc">세그먼트 셀렉션</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-table">
-        <div class="section__header">
-          <h2 class="section__title">Table</h2>
-          <p class="section__desc">테이블</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-list">
-        <div class="section__header">
-          <h2 class="section__title">List</h2>
-          <p class="section__desc">리스트</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-switch">
-        <div class="section__header">
-          <h2 class="section__title">Switch</h2>
-          <p class="section__desc">스위치</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-chip">
-        <div class="section__header">
-          <h2 class="section__title">Chip</h2>
-          <p class="section__desc">칩</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-tooltip">
-        <div class="section__header">
-          <h2 class="section__title">Tooltip</h2>
-          <p class="section__desc">툴팁</p>
-        </div>
-        <div class="section__content">
-
-        </div>
-      </section>
-      <section class="section section-dialogue">
-        <div class="section__header">
-          <h2 class="section__title">Dialogue</h2>
-          <p class="section__desc">다이얼로그 (레이어, 메시지 박스)</p>
-        </div>
-        <div class="section__content">
-
+          <select name="" class="select" id="">
+            <option value="0">옵션을 선택하세요</option>
+            <option value="1">옵션1</option>
+            <option value="2">옵션2</option>
+          </select>
         </div>
       </section>
     </div>
