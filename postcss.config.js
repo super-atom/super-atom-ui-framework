@@ -29,7 +29,6 @@ module.exports = (api) => {
       postcssCascadeLayers({ onImportLayerRule: 'warn' }),
       postcssSortMediaQueries(),
       'postcss-advanced-variables',
-      'lost',
       'tailwindcss',
       'autoprefixer'
     ],

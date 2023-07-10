@@ -6,7 +6,3 @@
 @import './variable.scss';
 @import './module.scss';
 @import './page.scss';
-
-img {
-  @include rwd-img;
-}
