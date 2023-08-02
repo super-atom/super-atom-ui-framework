@@ -31,12 +31,11 @@
     border-width: 1px;
   }
 
-  &.outlined-reverse,
-  &[data-type='outlined-reverse'] {
-    color: $white;
-    border-color: $white;
-    border-style: solid;
-    border-width: 1px;
+  &.default,
+  &[data-type='default'],
+  &.round,
+  &[data-type='round'] {
+    color: invert($default-button-color);
   }
 
 

@@ -7,7 +7,8 @@
   $background-color: $default-button-background-color,
   $line-height: $default-button-line-height,
   $min-height: $default-button-min-height,
-  $box-shadow: $default-button-box-shadow
+  $box-shadow: $default-button-box-shadow,
+  $color: $default-button-color,
 ) {
   display: inline-flex;
   align-items: center;
@@ -18,6 +19,7 @@
   line-height: $line-height;
   background-color: $background-color;
   border: $border-width $border-style $border-color;
+  color: $color;
   @if($box-shadow) {
     box-shadow: $box-shadow;
   }

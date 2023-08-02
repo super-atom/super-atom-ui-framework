@@ -27,17 +27,6 @@
     border-color: $form-state-focus;
   }
 
-  &:read-only {
-    background-color: $form-state-read-only;
-    cursor: not-allowed;
-
-    &:hover,
-    &:focus,
-    &:active {
-      border-color: unset;
-    }
-  }
-
   &:disabled {
     background-color: $form-state-disabled;
     cursor: not-allowed;

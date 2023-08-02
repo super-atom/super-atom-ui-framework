@@ -24,8 +24,9 @@ $default-button-border-color: $color-main;
 $default-button-border-radius: 0.5rem;
 $default-button-background-color: $color-main;
 $default-button-box-shadow: revert;
+$default-button-color: black;
 
-// * Component : Input
+// * Component : Input & Select
 $default-input-font-size: 1.6rem;
 $default-input-padding: point(2) point(4);
 $default-input-min-height: 4rem;

@@ -63,6 +63,6 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 });
