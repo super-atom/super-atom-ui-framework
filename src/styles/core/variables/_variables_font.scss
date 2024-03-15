@@ -20,7 +20,7 @@ $body-line-height: 1.5 !default;
 $body-background-color: white !default;
 
 // * Responsive Base Heading Element Font Size
-$base-font-sizes-h1: (
+$base-font-sizes-responsive-h1: (
   $bp-min-xs: (
     1.3rem,
   ),
@@ -31,7 +31,7 @@ $base-font-sizes-h1: (
     2rem,
   ),
 );
-$base-font-sizes-h2: (
+$base-font-sizes-responsive-h2: (
   $bp-min-xs: (
     1.2rem,
   ),
@@ -42,7 +42,7 @@ $base-font-sizes-h2: (
     1.5rem,
   ),
 );
-$base-font-sizes-h3: (
+$base-font-sizes-responsive-h3: (
   $bp-min-xs: (
     1.1rem,
   ),
@@ -53,7 +53,7 @@ $base-font-sizes-h3: (
     1.3rem,
   ),
 );
-$base-font-sizes-h4: (
+$base-font-sizes-responsive-h4: (
   $bp-max-md: (
     1rem,
   ),
@@ -61,12 +61,12 @@ $base-font-sizes-h4: (
     1.17rem,
   ),
 );
-$base-font-sizes-h5: (
+$base-font-sizes-responsive-h5: (
   $bp-min-xs: (
     0.9rem,
   ),
 );
-$base-font-sizes-h6: (
+$base-font-sizes-responsive-h6: (
   $bp-min-xs: (
     0.8rem,
   ),

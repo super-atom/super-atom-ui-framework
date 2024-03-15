@@ -34,8 +34,8 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset',
         generator: {
-          filename: 'assets/fonts/[name].[ext]'
-        }
+          filename: 'assets/fonts/[name].[ext]',
+        },
       },
       {
         test: /\.js$/,
@@ -44,7 +44,17 @@ module.exports = {
       },
       {
         test: /\.hbs$/,
-        use: ['handlebars-loader'],
+        use: [
+          {
+            loader: 'handlebars-loader',
+            options: {
+              precompileOptions: {
+                knownHelpersOnly: false,
+              },
+              helperDirs: path.join(__dirname, '../src/views/helpers'),
+            },
+          },
+        ],
       },
     ],
   },
@@ -79,7 +89,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'src', to: './' }],
-    })
+    }),
   ].concat(htmlPlugins),
 };
 function generateHtmlPlugins(templateDir) {
@@ -88,9 +98,22 @@ function generateHtmlPlugins(templateDir) {
     const parts = item.split('.');
     const name = parts[0];
     const extension = parts[1];
+
+    let json = null;
+    if (
+      fs.existsSync(path.resolve(__dirname, `../src/views/data/${name}.json`))
+    ) {
+      const jsonFile = fs.readFileSync(
+        path.resolve(__dirname, `../src/views/data/${name}.json`),
+        'utf8'
+      );
+      json = JSON.parse(jsonFile);
+    }
+
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      templateParameters: json,
       minify: false,
       chunks: ['style'],
     });

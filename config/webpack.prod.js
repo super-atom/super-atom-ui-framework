@@ -4,7 +4,6 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.common.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const { cssLoaders } = require('./util');
 
@@ -64,7 +63,6 @@ module.exports = merge(common, {
       dry: false,
       verbose: true,
     }),
-
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
       chunkFilename: 'styles/[name].css',

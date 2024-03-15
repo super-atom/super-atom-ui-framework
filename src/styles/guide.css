@@ -80,7 +80,7 @@
   text-align: center;
 }
 .page-guide .section-grid .grid .grid-item {
-  background-color: #574538;
+  background-color: black;
 }
 .page-guide .section-color .color-wrap {
   display: -webkit-box;
@@ -144,7 +144,7 @@
   background-color: #1a1a1a;
 }
 .page-guide .section-color .color.color-primary.color-main {
-  background-color: #574538;
+  background-color: black;
 }
 .page-guide .section-color .color.color-primary.color-sub {
   background-color: #EBE4CC;
@@ -152,186 +152,15 @@
 .page-guide .section-color .color.color-status {
   background-color: #D25C27;
 }
-.page-guide .section-spacing .spacing-wrap {
+.page-guide .section-typeface .typeface {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 100%;
-}
-.page-guide .section-spacing .spacing {
-  position: relative;
-  background-color: #574538;
-}
-.page-guide .section-spacing .spacing + .spacing {
-  margin-left: 1.6rem;
-}
-.page-guide .section-spacing .spacing::before {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-.page-guide .section-spacing .spacing:nth-child(1) {
-  width: 0.4rem;
-  height: 0.4rem;
-}
-.page-guide .section-spacing .spacing:nth-child(1)::before {
-  content: "1";
-}
-.page-guide .section-spacing .spacing:nth-child(2) {
-  width: 0.8rem;
-  height: 0.8rem;
-}
-.page-guide .section-spacing .spacing:nth-child(2)::before {
-  content: "2";
-}
-.page-guide .section-spacing .spacing:nth-child(3) {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-.page-guide .section-spacing .spacing:nth-child(3)::before {
-  content: "3";
-}
-.page-guide .section-spacing .spacing:nth-child(4) {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.page-guide .section-spacing .spacing:nth-child(4)::before {
-  content: "4";
-}
-.page-guide .section-spacing .spacing:nth-child(5) {
-  width: 2rem;
-  height: 2rem;
-}
-.page-guide .section-spacing .spacing:nth-child(5)::before {
-  content: "5";
-}
-.page-guide .section-spacing .spacing:nth-child(6) {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.page-guide .section-spacing .spacing:nth-child(6)::before {
-  content: "6";
-}
-.page-guide .section-spacing .spacing:nth-child(7) {
-  width: 2.8rem;
-  height: 2.8rem;
-}
-.page-guide .section-spacing .spacing:nth-child(7)::before {
-  content: "7";
-}
-.page-guide .section-spacing .spacing:nth-child(8) {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.page-guide .section-spacing .spacing:nth-child(8)::before {
-  content: "8";
-}
-.page-guide .section-spacing .spacing:nth-child(9) {
-  width: 3.6rem;
-  height: 3.6rem;
-}
-.page-guide .section-spacing .spacing:nth-child(9)::before {
-  content: "9";
-}
-.page-guide .section-spacing .spacing:nth-child(10) {
-  width: 4rem;
-  height: 4rem;
-}
-.page-guide .section-spacing .spacing:nth-child(10)::before {
-  content: "10";
-}
-.page-guide .section-spacing .spacing:nth-child(11) {
-  width: 4.4rem;
-  height: 4.4rem;
-}
-.page-guide .section-spacing .spacing:nth-child(11)::before {
-  content: "11";
-}
-.page-guide .section-spacing .spacing:nth-child(12) {
-  width: 4.8rem;
-  height: 4.8rem;
-}
-.page-guide .section-spacing .spacing:nth-child(12)::before {
-  content: "12";
-}
-.page-guide .section-spacing .spacing:nth-child(13) {
-  width: 5.2rem;
-  height: 5.2rem;
-}
-.page-guide .section-spacing .spacing:nth-child(13)::before {
-  content: "13";
-}
-.page-guide .section-spacing .spacing:nth-child(14) {
-  width: 5.6rem;
-  height: 5.6rem;
-}
-.page-guide .section-spacing .spacing:nth-child(14)::before {
-  content: "14";
-}
-.page-guide .section-spacing .spacing:nth-child(15) {
-  width: 6rem;
-  height: 6rem;
-}
-.page-guide .section-spacing .spacing:nth-child(15)::before {
-  content: "15";
-}
-.page-guide .section-spacing .spacing:nth-child(16) {
-  width: 6.4rem;
-  height: 6.4rem;
-}
-.page-guide .section-spacing .spacing:nth-child(16)::before {
-  content: "16";
-}
-.page-guide .section-spacing .spacing:nth-child(17) {
-  width: 6.8rem;
-  height: 6.8rem;
-}
-.page-guide .section-spacing .spacing:nth-child(17)::before {
-  content: "17";
-}
-.page-guide .section-spacing .spacing:nth-child(18) {
-  width: 7.2rem;
-  height: 7.2rem;
-}
-.page-guide .section-spacing .spacing:nth-child(18)::before {
-  content: "18";
-}
-.page-guide .section-spacing .spacing:nth-child(19) {
-  width: 7.6rem;
-  height: 7.6rem;
-}
-.page-guide .section-spacing .spacing:nth-child(19)::before {
-  content: "19";
-}
-.page-guide .section-spacing .spacing:nth-child(20) {
-  width: 8rem;
-  height: 8rem;
-}
-.page-guide .section-spacing .spacing:nth-child(20)::before {
-  content: "20";
-}
-.page-guide .section-typeface .typeface {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
 }
 .page-guide .section-typeface .typeface .item {
-  width: 25%;
+  width: 20%;
   padding: 0.8rem;
   border: 1px solid #e8e8e8;
   font-size: 2.4rem;

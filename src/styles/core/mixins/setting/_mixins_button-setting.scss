@@ -21,13 +21,14 @@
   &.text,
   &[data-type='text'] {
     border-color: transparent;
+    padding: 0;
+    min-height: initial;
   }
 
   &.outlined,
   &[data-type='outlined'] {
     border-color: $base-color-grey-3;
     border-style: solid;
-    // border-style: solid;
     border-width: 1px;
   }
 

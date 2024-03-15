@@ -5,6 +5,8 @@ const postcssSimpleVars = require('postcss-simple-vars');
 const postcssCascadeLayers = require('@csstools/postcss-cascade-layers');
 const postcssSortMediaQueries = require('postcss-sort-media-queries');
 const postcssSass = require('@csstools/postcss-sass');
+const postcssCustomSelectors = require('postcss-custom-selectors');
+const postcssGlobalData = require('@csstools/postcss-global-data');
 
 module.exports = (api) => {
   return {
@@ -28,6 +30,12 @@ module.exports = (api) => {
       }),
       postcssCascadeLayers({ onImportLayerRule: 'warn' }),
       postcssSortMediaQueries(),
+      postcssGlobalData({
+        files: [
+          './src/styles/custom-selectors.scss'
+        ]
+      }),
+      postcssCustomSelectors(),
       'postcss-advanced-variables',
       'autoprefixer'
     ],

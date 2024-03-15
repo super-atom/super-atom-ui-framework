@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  {{> ../partials/meta}}
-  {{> ../partials/script}}
-  <script src="js/home.js"></script>
-  {{> ../partials/link}}
-  <title>Home</title>
-</head>
-<body class="page-home">
-  {{> ../partials/header}}
-  <div class="content" id="content">
-  </div>
-  {{> ../partials/footer}}
-</body>
+  <head>
+    {{> ../partials/meta}}
+    {{> ../partials/script}}
+    <script src="js/home.js"></script>
+    {{> ../partials/link}}
+    <title>Home</title>
+  </head>
+  <body class="page page-home">
+    {{> ../partials/header}}
+    <div class="content" id="content">
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3 class="test">h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+      <p class="str">p1</p>
+      <p class="str">p2</p>
+      <p class="str">p3</p>
+
+      <div class="div">
+        <img src="" alt="">
+      </div>
+
+      <section class="section" id="section1">
+        <p>section1</p>
+        <div class="card">
+          <p class="str">card</p>
+        </div>
+      </section>
+      <section class="section" id="section2">
+        <p>section2</p>
+        <div class="card">
+          <p class="str">card</p>
+        </div>
+      </section>
+      <section class="section" id="section3">
+        <p>section3</p>
+        <div class="card">
+          <p class="str">card</p>
+        </div>
+      </section>
+    </div>
+    {{> ../partials/footer}}
+  </body>
 </html>

@@ -7,22 +7,12 @@
 $colors: (
   main: $color-main,
   sub: $color-sub,
-  black: $black,
-  white: $white,
-  grey: $base-color-grey,
 );
-
-//* --------------------------------------------------------------------------
-// 박스 정렬 설정
-// justify-*, align-* 대신 place-* 속성 사용하고자 할 경우 true 설정
-$using-place-layout: false;
 
 //* --------------------------------------------------------------------------
 $easings: ease-merge(
   (
-    in-euid: cubic-bezier(0.43, 0.16, 0.7, 0.52),
-    out-euid: cubic-bezier(0.31, 0.16, 0.56, 0.99),
-    inout-euid: cubic-bezier(0.94, 0.01, 0.47, 1.13),
+    sample: cubic-bezier(0.43, 0.16, 0.7, 0.52),
   )
 );
 

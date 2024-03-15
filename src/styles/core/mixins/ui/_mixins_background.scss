@@ -1,4 +1,4 @@
-@mixin background($url, $size: cover, $repeat: no-repeat, $position: center) {
+@mixin background($url, $size: contain, $repeat: no-repeat, $position: center) {
   @if $url {
     background-image: url($url);
   }

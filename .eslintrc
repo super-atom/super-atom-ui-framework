@@ -1,16 +1,10 @@
 {
-  "plugins": [
-    "prettier",
-    "import",
-  ],
+  "plugins": ["prettier", "import"],
   "extends": [
     "eslint:recommended",
     "prettier/prettier",
     "plugin:import/recommended"
   ],
-  "parserOptions": {
-    "sourceType": "module"
-  },
   "rules": {
     // "prettier/prettier": "error",
     "no-undefined": 0,
@@ -23,10 +17,5 @@
     "commonjs": true,
     "jquery": true
   },
-  "ignorePatterns": [
-    ".gitignore",
-    "config/",
-    "dist/",
-    "node_modules/"
-  ]
+  "ignorePatterns": [".gitignore", "config/", "dist/", "node_modules/"]
 }

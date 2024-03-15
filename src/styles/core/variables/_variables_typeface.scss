@@ -5,27 +5,9 @@ $typeface-spoka-han-sans-neo: 'SpoqaHanSansNeo', sans-serif;
 $typeface-spoka-han-sans-neo-letter-spacing: -0.5px;
 $typeface-spoka-han-sans-neo-line-height: 1;
 
-$typeface-lg-smart: 'LGSmHa', sans-serif;
-$typeface-lg-smart-letter-spacing: -0.1px;
-$typeface-lg-smart-line-height: 1;
-
 // * Typeface Setting
 // Base
 $base-font: $typeface-spoka-han-sans-neo;
 $base-font-letter-spacing: $typeface-spoka-han-sans-neo-letter-spacing;
 $base-font-line-height: $typeface-spoka-han-sans-neo-line-height;
-$base-typeface: 300 math.div(1.6rem, $base-font-line-height) $base-font;
-
-// 300 24px/100% Spoqa Han Sans Neo;
-
-// Main Font
-$main-font: $base-font;
-$main-font-letter-spacing: $base-font-letter-spacing;
-$main-font-letter-line-height: $base-font-line-height;
-$main-typeface: $base-typeface;
-
-// Title Font
-$title-font: $typeface-lg-smart;
-$title-font-letter-spacing: $typeface-lg-smart-letter-spacing;
-$title-font-letter-line-height: $typeface-lg-smart-line-height;
-$title-font-typeface: 300 math.div(1.6rem, $title-font-letter-line-height) $title-font;
+$base-font-typeface: 300 math.div(1.6rem, $base-font-line-height) $base-font;

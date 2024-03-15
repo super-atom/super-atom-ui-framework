@@ -6,7 +6,6 @@
     .#{$component} {
       @if ($component == button) {
         @include button($font: map-deep-get($component-map, button, font),
-          // $font-size: map-deep-get($component-map, button, font-size),
           $padding: map-deep-get($component-map, button, padding),
           $border-width: map-deep-get($component-map, button, border-width),
           $border-style: map-deep-get($component-map, button, border-style),
@@ -14,8 +13,8 @@
           $background-color: map-deep-get($component-map, button, background-color),
           $border-radius: map-deep-get($component-map, button, border-radius),
           $box-shadow: map-deep-get($component-map, button, box-shadow),
-          $line-height: map-deep-get($component-map, button, border-line-height),
-          $min-height: map-deep-get($component-map, button, min-height));
+          $line-height: map-deep-get($component-map, button, border-line-height)
+          );
         @include button-setting();
       }
       @if ($component == checkbox) {

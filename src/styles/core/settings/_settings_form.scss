@@ -1,5 +1,6 @@
 @import '../core';
 
+.btn,
 .button,
 button,
 input,
@@ -34,12 +35,4 @@ input.input {
     color: $form-state-invalid;
     border-color: $form-state-invalid !important;
   }
-
-  &[class*="-full"] {
-    width: 100%;
-  }
-}
-
-fieldset.fieldset {
-  width: 100%;
 }

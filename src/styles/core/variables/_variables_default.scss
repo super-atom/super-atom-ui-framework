@@ -1,7 +1,3 @@
-// * Default Text Style
-$default-font-size: 1.6;
-$default-line-height: 1.5;
-
 // * Component : Form State
 $default-form-state-normal: $base-color-grey-5;
 $default-form-state-hover: transparent;
@@ -10,13 +6,13 @@ $default-form-state-active: $teal-7;
 $default-form-state-disabled: $grey-3;
 $default-form-state-read-only: initial;
 $default-form-state-valid: $green-7;
-$default-form-state-invalid: $red-7 !default;
+$default-form-state-invalid: $red-7;
 
 // * Component : Button
 $default-button-font: revert;
 $default-button-font-size: 1.6rem;
 $default-button-padding: point(2) point(4);
-$default-button-min-height: 4rem;
+// $default-button-min-height: 4rem;
 $default-button-line-height: 2rem;
 $default-button-border-width: 1px;
 $default-button-border-style: solid;
@@ -26,7 +22,7 @@ $default-button-background-color: $color-main;
 $default-button-box-shadow: revert;
 $default-button-color: black;
 
-// * Component : Input & Select
+// * Component : Input
 $default-input-font-size: 1.6rem;
 $default-input-padding: point(2) point(4);
 $default-input-min-height: 4rem;

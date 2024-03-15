@@ -6,7 +6,7 @@
   $border-radius: $default-button-border-radius,
   $background-color: $default-button-background-color,
   $line-height: $default-button-line-height,
-  $min-height: $default-button-min-height,
+  // $min-height: $default-button-min-height,
   $box-shadow: $default-button-box-shadow,
   $color: $default-button-color,
 ) {
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   font: $font;
-  min-height: $min-height;
+  // min-height: $min-height;
   padding: $padding;
   line-height: $line-height;
   background-color: $background-color;
