@@ -149,15 +149,15 @@
 .page-guide .section-color .color.color-primary.color-sub {
   background-color: #EBE4CC;
 }
-.page-guide .section-color .color.color-status {
-  background-color: #D25C27;
-}
 .page-guide .section-typeface .typeface {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.page-guide .section-typeface .typeface.typeface-body {
+  font-family: "NanumSquareNeo";
 }
 .page-guide .section-typeface .typeface .item {
   width: 20%;

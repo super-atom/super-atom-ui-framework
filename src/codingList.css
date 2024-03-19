@@ -58,7 +58,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 40px;
-  margin-right: 20px;
   padding: 0 16px;
   color: black;
   color: #fff;
@@ -77,6 +76,9 @@
     padding: 0 8px;
     font-size: 14px;
   }
+}
+.page-codinglist header .guide-list-wrap {
+  padding-right: 24px;
 }
 @media (max-width: 767px) {
   .page-codinglist header .guide-list-wrap {

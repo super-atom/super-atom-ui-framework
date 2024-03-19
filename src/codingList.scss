@@ -27,6 +27,7 @@
       padding: 24px;
       font-weight: 800;
       font-size: 24px;
+
       @media (max-width: 767px) {
         padding: 16px;
         font-size: 16px;
@@ -38,7 +39,6 @@
       align-items: center;
       justify-content: center;
       min-height: 40px;
-      margin-right: 20px;
       padding: 0 16px;
       color: black;
       color: #fff;
@@ -58,6 +58,8 @@
     }
 
     .guide-list-wrap {
+      padding-right: 24px;
+
       @media (max-width: 767px) {
         padding: 0 16px 16px 16px;
       }
@@ -66,6 +68,7 @@
 
   .main {
     margin-top: 80px;
+
     @media (max-width: 767px) {
       margin-top: 100px;
     }
@@ -73,6 +76,7 @@
 
   .srch-bar {
     padding: 20px;
+
     .count {
       right: 0;
       bottom: 0;
@@ -98,6 +102,7 @@
     margin-top: 20px;
     padding: 0 20px 20px 20px;
     overflow-y: scroll;
+
     @media (max-width: 767px) {
       padding: 0;
     }
@@ -116,7 +121,7 @@
         border-right: 1px #999 solid;
       }
 
-      tr + tr > th {
+      tr+tr>th {
         border-top: 1px #999 solid;
       }
     }
@@ -149,7 +154,7 @@
       &.ing {
         background: #fff5da;
 
-        > td {
+        >td {
           color: #212121;
 
           &:nth-child(2) {
@@ -161,7 +166,7 @@
       &.complete {
         background: #def7ff;
 
-        > td {
+        >td {
           color: #212121;
 
           &:nth-child(2) {
@@ -173,7 +178,7 @@
       &.hold {
         background: #f6f6f6;
 
-        > td {
+        >td {
           color: #ccc;
         }
       }
@@ -182,12 +187,12 @@
         background: #f6f6f6;
         pointer-events: none;
 
-        + tr.modify {
+        +tr.modify {
           background: #f6f6f6;
           pointer-events: none;
         }
 
-        > td {
+        >td {
           text-decoration: line-through;
           opacity: 0.5;
         }
@@ -196,12 +201,12 @@
       &.nothing {
         background: transparent;
 
-        > td {
+        >td {
           height: 300px;
         }
       }
 
-      &.modify > td {
+      &.modify>td {
         color: #80001c;
         vertical-align: top;
         background: #ffe3f1;
@@ -211,7 +216,7 @@
         }
       }
 
-      &.del + tr.modify > td {
+      &.del+tr.modify>td {
         color: #aaa;
         text-decoration: line-through;
         background: unset;
@@ -238,7 +243,7 @@
     }
 
     tr {
-      > td > span {
+      >td>span {
         color: inherit;
         opacity: 0.3;
 
@@ -247,7 +252,7 @@
         }
       }
 
-      &.del > td > span {
+      &.del>td>span {
         color: #ccc !important;
       }
     }

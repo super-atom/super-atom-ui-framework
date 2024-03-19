@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const webpack = require('webpack');
 const PATH = require('../config/path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -10,6 +9,8 @@ const htmlPlugins = generateHtmlPlugins('../src/views/pages');
 module.exports = {
   entry: {
     style: './src/js/style.js',
+    common: './src/js/common.js',
+    component: './src/js/component.js',
   },
   target: ['web', 'es5'],
   output: {
@@ -115,7 +116,7 @@ function generateHtmlPlugins(templateDir) {
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       templateParameters: json,
       minify: false,
-      chunks: ['style'],
+      chunks: ['style', 'common', 'component'],
     });
   });
 }

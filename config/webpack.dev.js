@@ -60,6 +60,7 @@ module.exports = merge(common, {
       emitWarning: true,
       files: path.resolve(__dirname, '../src'),
     }),
+    // new StylelintPlugin(),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),

@@ -24,3 +24,29 @@
   '../../../../assets/fonts/SpoqaHanSansNeo-Thin',
   100
 );
+
+@include font-face(
+  'NanumSquareNeo',
+  '../../../../assets/fonts/NanumSquareNeoTTF-aLt',
+  100
+);
+@include font-face(
+  'NanumSquareNeo',
+  '../../../../assets/fonts/NanumSquareNeoTTF-bRg',
+  300
+);
+@include font-face(
+  'NanumSquareNeo',
+  '../../../../assets/fonts/NanumSquareNeoTTF-cBd',
+  500
+);
+@include font-face(
+  'NanumSquareNeo',
+  '../../../../assets/fonts/NanumSquareNeoTTF-dEb',
+  700
+);
+@include font-face(
+  'NanumSquareNeo',
+  '../../../../assets/fonts/NanumSquareNeoTTF-eHv',
+  900
+);

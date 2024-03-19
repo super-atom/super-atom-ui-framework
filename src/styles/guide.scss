@@ -152,6 +152,10 @@
       display: flex;
       flex-wrap: wrap;
 
+      &.typeface-body {
+        font-family: 'NanumSquareNeo';
+      }
+
       .item {
         width: 20%;
         padding: point(2);

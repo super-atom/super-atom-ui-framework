@@ -1,9 +1,9 @@
 {
-  "plugins": ["stylelint-prettier"],
   "rules": {
-    "prettier/prettier": true
+    "prettier/prettier": true,
+    "scss/at-if-no-null": null
   },
   "extends": [
-    "stylelint-prettier/recommended"
+    "stylelint-config-prettier-scss"
   ]
 }

@@ -21,6 +21,7 @@
         "regenerator": true
       }
     ],
+    ["@babel/plugin-transform-modules-commonjs"],
     [
       "module-resolver",
       {
@@ -30,7 +31,7 @@
           "styles": "./src/assets/styles",
           "images": "./src/assets/images",
           "videos": "./src/assets/videos",
-          "fonts": "./src/assets/fonts",
+          "fonts": "./src/assets/fonts"
         }
       }
     ]
