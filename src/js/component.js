@@ -1,4 +1,4 @@
-APP.namespace('APP.sample');
-APP.init = $(function(){
-  console.log("component.js")
-})
+APP.namespace("APP.sample");
+APP.init = $(function () {
+  console.log("component.js");
+});

@@ -18,6 +18,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     clean: true,
+    globalObject: 'self',
   },
   resolve: {
     extensions: ['.js', '.css', '.scss'],
