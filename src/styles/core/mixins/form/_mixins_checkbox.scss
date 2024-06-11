@@ -1,10 +1,15 @@
-@use 'sass:math';
-@mixin checkbox($font-size: $input-checkbox-font-size, $size: $input-checkbox-size, $color: $input-checkbox-color) {
+@use "sass:math";
+@mixin checkbox(
+  $font-size: $input-checkbox-font-size,
+  $size: $input-checkbox-size,
+  $color: $input-checkbox-color
+) {
   position: relative;
-  border-radius: 100%;
-  min-height: $size;
   width: $size;
+  min-height: $size;
+  margin: 0;
   border-color: $color;
+  border-radius: 100%;
 
   &:disabled {
     background-color: $form-state-disabled;
@@ -13,16 +18,16 @@
 
   &:checked {
     &::before {
-      content: '';
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
-      border-radius: 100%;
-      width: math.div($size,2);
-      height: math.div($size,2);
+      display: block;
+      width: math.div($size, 2);
+      height: math.div($size, 2);
       background-color: $color;
+      border-radius: 100%;
       transform: translate(-50%, -50%);
+      content: "";
     }
   }
   @content;
